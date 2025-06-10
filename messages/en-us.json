@@ -1,0 +1,60 @@
+{
+  "components": {
+    "Navbar": {
+      "title": "codex",
+      "links": {
+        "anime": "anime",
+        "manga": "manga",
+        "games": "games",
+        "books": "books",
+        "series": "tv series",
+        "movies": "movies"
+      }
+    },
+    "Footer": {
+      "text": "developed with NextJS"
+    },
+    "Information": {
+      "yearSummary": "{year} summary",
+      "manga": "{count} manga",
+      "anime": "{count} anime",
+      "books": "{count, plural, =0 {books} =1 {# book} other {# books}}",
+      "series": "{count} tv series",
+      "movies": "{count, plural, =0 {movies} =1 {# movie} other {# movies}}",
+      "games": "{count, plural, =0 {games} =1 {# game} other {# games}}"
+    },
+    "ListSection": {
+      "seeAll": "See all"
+    },
+    "Card": {
+      "startDate": "start date: {date}",
+      "endDate": "end date: {date}"
+    },
+    "LanguageSelector": {
+      "languages": [
+        {
+          "url": "/en-us",
+          "name": "English"
+        },
+        {
+          "url": "/pt-br",
+          "name": "Portuguese"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "misc": {
+      "anime": "anime",
+      "manga": "manga",
+      "games": "games",
+      "books": "books",
+      "series": "tv series",
+      "movies": "movies"
+    },
+    "NotFoundPage": {
+      "message": "Page not found!",
+      "notFoundImageAlt": "Confused namazu from FFXIV with a question mark and a HUH text"
+    }
+  }
+}

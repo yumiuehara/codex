@@ -1,0 +1,363 @@
+[
+    {
+        "id": 1,
+        "media": {
+            "name": "Longlegs",
+            "image": "/content/movie/longlegs.webp",
+            "idMedia": 3
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "description": "kinda cool",
+        "like": false
+    },
+    {
+        "id": 2,
+        "media": {
+            "name": "Natsume Yuujinchou 7",
+            "image": "/content/anime/natsume7.webp",
+            "idMedia": 1
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 3,
+        "media": {
+            "name": "Oshi no Ko",
+            "image": "/content/manga/oshi_no_ko.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 4,
+        "media": {
+            "name": "Shibatarian",
+            "image": "/content/manga/shibatarian.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 5,
+        "media": {
+            "name": "Shimanami Tasogare",
+            "image": "/content/manga/shimanami.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 6,
+        "media": {
+            "name": "The Strange Tale of Panorama Island",
+            "image": "/content/manga/panorama_island.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 7,
+        "media": {
+            "name": "Love and Deepspace",
+            "image": "/content/games/lads.webp",
+            "idMedia": 4
+        },
+        "startDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 8,
+        "media": {
+            "name": "Nu Carnival",
+            "image": "/content/games/nu_carnival.webp",
+            "idMedia": 4
+        },
+        "startDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 9,
+        "media": {
+            "name": "999: Nine Hours, Nine Persons, Nine Doors",
+            "image": "/content/games/999.webp",
+            "idMedia": 4
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": true
+    },
+    {
+        "id": 10,
+        "media": {
+            "name": "Umineko no Naku Koro ni",
+            "image": "/content/games/umineko.webp",
+            "idMedia": 4
+        },
+        "startDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 11,
+        "media": {
+            "name": "Tribe Nine",
+            "image": "/content/games/tribe_nine.webp",
+            "idMedia": 4
+        },
+        "description": "died for our sins",
+        "startDate": "01-01-2025",
+        "like": true
+    },
+    {
+        "id": 12,
+        "media": {
+            "name": "Zero Escape: Virtue's Last Reward",
+            "image": "/content/games/vlr.webp",
+            "idMedia": 4
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 13,
+        "media": {
+            "name": "Not Simple",
+            "image": "/content/manga/not_simple.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 14,
+        "media": {
+            "name": "Kanikosen",
+            "image": "/content/manga/kanikosen.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 15,
+        "media": {
+            "name": "Zero Escape: Zero Time Dilemma",
+            "image": "/content/games/ztd.webp",
+            "idMedia": 4
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 16,
+        "media": {
+            "name": "Nonnonba",
+            "image": "/content/manga/nonnonba.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 17,
+        "media": {
+            "name": "Uriko-hime no Yoru Cinderella no Asa",
+            "image": "/content/manga/urikohime.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 18,
+        "media": {
+            "name": "The Boys S3",
+            "image": "/content/series/theboyss3.webp",
+            "idMedia": 5
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 19,
+        "media": {
+            "name": "The Hunt",
+            "image": "/content/movie/the_hunt.webp",
+            "idMedia": 3
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 20,
+        "media": {
+            "name": "Yume no Hashibashi",
+            "image": "/content/manga/yume_no_hashibashi.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 21,
+        "media": {
+            "name": "The Yellow Wallpaper",
+            "image": "/content/book/the_yellow_wallpaper.webp",
+            "idMedia": 6
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 22,
+        "media": {
+            "name": "Blood Lad",
+            "image": "/content/manga/blood_lad.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 23,
+        "media": {
+            "name": "To be hero",
+            "image": "/content/anime/to_be_hero.webp",
+            "idMedia": 1
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 24,
+        "media": {
+            "name": "Chi no wadachi",
+            "image": "/content/manga/chi_no_wadachi.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 25,
+        "media": {
+            "name": "The Voynich Hotel",
+            "image": "/content/manga/the_voynich_hotel.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 26,
+        "media": {
+            "name": "The Hundred Line [Demo]",
+            "image": "/content/games/the_hundred_line.webp",
+            "idMedia": 4
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 27,
+        "media": {
+            "name": "Orb: on the movements of the earth",
+            "image": "/content/manga/orb.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 28,
+        "media": {
+            "name": "Cure",
+            "image": "/content/movie/cure.webp",
+            "idMedia": 3
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 29,
+        "media": {
+            "name": "To be heroine",
+            "image": "/content/anime/to_be_heroine.webp",
+            "idMedia": 1
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 30,
+        "media": {
+            "name": "MADK",
+            "image": "/content/manga/madk.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 31,
+        "media": {
+            "name": "Man of many faces",
+            "image": "/content/manga/man_of_many_faces.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 32,
+        "media": {
+            "name": "Clamp School Detectives",
+            "image": "/content/manga/clamp_school_detectives.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    },
+    {
+        "id": 33,
+        "media": {
+            "name": "Duklyon: Clamp School Defenders",
+            "image": "/content/manga/duklyon.webp",
+            "idMedia": 2
+        },
+        "startDate": "01-01-2025",
+        "endDate": "01-01-2025",
+        "like": false
+    }
+]

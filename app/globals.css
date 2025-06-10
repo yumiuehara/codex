@@ -1,21 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-pink: #FF2E63;
+  --color-red: #EC221F;
+  --color-blue: #08D9D6;
+  --color-dark-gray: #1C1A1A;
+  --card-aspect-ratio: 150/210;
+
+  --smooth-dark-gray-gradient: linear-gradient(90deg,rgba(28, 26, 26, 1) 54%, rgba(28, 26, 26, 0.9) 64%, rgba(28, 26, 26, 0.81) 71%, rgba(255, 255, 255, 0) 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #1d1d1d;
+  --foreground: #ededed;
+}
+
+:root:has(.no-scroll) {
+  overflow:hidden;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inconsolata, Arial, Helvetica, sans-serif;
 }
+
+button {
+  cursor: pointer;
+}
+
+.card__title {  /* Element */
+  @apply w-[140px] md:w-[150px];
+}
+
+.card__image {  /* Element */
+  @apply w-[140px] md:w-[150px] aspect-(--card-aspect-ratio);
+}
+
