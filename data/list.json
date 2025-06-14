@@ -6,9 +6,12 @@
             "image": "/content/movie/longlegs.webp",
             "idMedia": 3
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
-        "description": "kinda cool",
+        "startDate": "06-01-2025",
+        "endDate": "06-01-2025",
+        "description": {
+            "en-us": "kinda cool",
+            "pt-br": "legalzinho"
+        },
         "like": false
     },
     {
@@ -18,8 +21,8 @@
             "image": "/content/anime/natsume7.webp",
             "idMedia": 1
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
         "like": false
     },
     {
@@ -29,8 +32,12 @@
             "image": "/content/manga/oshi_no_ko.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "01-02-2025",
+        "endDate": "01-02-2025",
+        "description": {
+            "en-us": "lmao what",
+            "pt-br": "definitivamente um dos mangás já escritos"
+        },
         "like": false
     },
     {
@@ -40,8 +47,12 @@
             "image": "/content/manga/shibatarian.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "04-05-2023",
+        "endDate": "01-02-2025",
+        "description": {
+            "en-us": "what?",
+            "pt-br": "han?"
+        },
         "like": false
     },
     {
@@ -51,9 +62,9 @@
             "image": "/content/manga/shimanami.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
-        "like": false
+        "startDate": "19-02-2025",
+        "endDate": "19-02-2025",
+        "like": true
     },
     {
         "id": 6,
@@ -62,8 +73,8 @@
             "image": "/content/manga/panorama_island.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "19-02-2025",
+        "endDate": "19-02-2025",
         "like": false
     },
     {
@@ -73,7 +84,7 @@
             "image": "/content/games/lads.webp",
             "idMedia": 4
         },
-        "startDate": "01-01-2025",
+        "startDate": "00-00-2025",
         "like": false
     },
     {
@@ -83,7 +94,7 @@
             "image": "/content/games/nu_carnival.webp",
             "idMedia": 4
         },
-        "startDate": "01-01-2025",
+        "startDate": "00-00-2025",
         "like": false
     },
     {
@@ -93,8 +104,8 @@
             "image": "/content/games/999.webp",
             "idMedia": 4
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
         "like": true
     },
     {
@@ -104,7 +115,7 @@
             "image": "/content/games/umineko.webp",
             "idMedia": 4
         },
-        "startDate": "01-01-2025",
+        "startDate": "00-00-2025",
         "like": false
     },
     {
@@ -114,8 +125,11 @@
             "image": "/content/games/tribe_nine.webp",
             "idMedia": 4
         },
-        "description": "died for our sins",
-        "startDate": "01-01-2025",
+        "description": {
+            "en-us": "died for our sins",
+            "pt-br": "riperino morreu por nós"
+        },
+        "startDate": "00-00-2025",
         "like": true
     },
     {
@@ -125,9 +139,9 @@
             "image": "/content/games/vlr.webp",
             "idMedia": 4
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
-        "like": false
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
+        "like": true
     },
     {
         "id": 13,
@@ -136,8 +150,8 @@
             "image": "/content/manga/not_simple.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "08-03-2025",
+        "endDate": "08-03-2025",
         "like": false
     },
     {
@@ -147,8 +161,8 @@
             "image": "/content/manga/kanikosen.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "12-03-2025",
+        "endDate": "12-03-2025",
         "like": false
     },
     {
@@ -158,8 +172,8 @@
             "image": "/content/games/ztd.webp",
             "idMedia": 4
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
         "like": false
     },
     {
@@ -169,8 +183,8 @@
             "image": "/content/manga/nonnonba.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "12-03-2025",
+        "endDate": "05-04-2025",
         "like": false
     },
     {
@@ -180,8 +194,8 @@
             "image": "/content/manga/urikohime.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "06-04-2025",
+        "endDate": "06-04-2025",
         "like": false
     },
     {
@@ -191,8 +205,8 @@
             "image": "/content/series/theboyss3.webp",
             "idMedia": 5
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
         "like": false
     },
     {
@@ -202,8 +216,8 @@
             "image": "/content/movie/the_hunt.webp",
             "idMedia": 3
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "13-04-2025",
+        "endDate": "13-04-2025",
         "like": false
     },
     {
@@ -213,8 +227,8 @@
             "image": "/content/manga/yume_no_hashibashi.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "14-04-2025",
+        "endDate": "14-04-2025",
         "like": false
     },
     {
@@ -224,8 +238,8 @@
             "image": "/content/book/the_yellow_wallpaper.webp",
             "idMedia": 6
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
         "like": false
     },
     {
@@ -235,8 +249,12 @@
             "image": "/content/manga/blood_lad.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "15-04-2025",
+        "endDate": "07-05-2025",
+        "description": {
+            "en-us": "very bad",
+            "pt-br": "ruim demais"
+        },
         "like": false
     },
     {
@@ -246,8 +264,8 @@
             "image": "/content/anime/to_be_hero.webp",
             "idMedia": 1
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "14-04-2025",
+        "endDate": "14-04-2025",
         "like": false
     },
     {
@@ -257,9 +275,9 @@
             "image": "/content/manga/chi_no_wadachi.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
-        "like": false
+        "startDate": "09-05-2025",
+        "endDate": "14-05-2025",
+        "like": true
     },
     {
         "id": 25,
@@ -268,8 +286,8 @@
             "image": "/content/manga/the_voynich_hotel.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "09-05-2025",
+        "endDate": "09-05-2025",
         "like": false
     },
     {
@@ -279,9 +297,9 @@
             "image": "/content/games/the_hundred_line.webp",
             "idMedia": 4
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
-        "like": false
+        "startDate": "15-05-2025",
+        "endDate": "16-05-2025",
+        "like": true
     },
     {
         "id": 27,
@@ -290,9 +308,9 @@
             "image": "/content/manga/orb.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
-        "like": false
+        "startDate": "14-05-2025",
+        "endDate": "16-05-2025",
+        "like": true
     },
     {
         "id": 28,
@@ -301,8 +319,8 @@
             "image": "/content/movie/cure.webp",
             "idMedia": 3
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "17-05-2025",
+        "endDate": "17-05-2025",
         "like": false
     },
     {
@@ -312,8 +330,8 @@
             "image": "/content/anime/to_be_heroine.webp",
             "idMedia": 1
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "21-05-2025",
+        "endDate": "21-05-2025",
         "like": false
     },
     {
@@ -323,8 +341,8 @@
             "image": "/content/manga/madk.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "22-05-2025",
+        "endDate": "22-05-2025",
         "like": false
     },
     {
@@ -334,8 +352,8 @@
             "image": "/content/manga/man_of_many_faces.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "22-05-2025",
+        "endDate": "23-05-2025",
         "like": false
     },
     {
@@ -345,8 +363,8 @@
             "image": "/content/manga/clamp_school_detectives.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "23-05-2025",
+        "endDate": "23-05-2025",
         "like": false
     },
     {
@@ -356,8 +374,8 @@
             "image": "/content/manga/duklyon.webp",
             "idMedia": 2
         },
-        "startDate": "01-01-2025",
-        "endDate": "01-01-2025",
+        "startDate": "23-05-2025",
+        "endDate": "23-05-2025",
         "like": false
     }
 ]

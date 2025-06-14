@@ -14,8 +14,13 @@ export type Log = {
   media: Media;
   startDate: string;
   endDate?: string;
-  description?: string;
+  description?: Description;
   like: boolean;
+};
+
+type Description = {
+  en_us: string;
+  pt_br: string;
 };
 
 export enum MediaTypeEnum {

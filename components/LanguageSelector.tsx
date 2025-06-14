@@ -27,8 +27,6 @@ export default function LanguageSelector({ className }: LanguageSelectorProps) {
 
   const currentLanguage = useLocale();
 
-  console.log(currentLanguage);
-
   const [selected, setSelected] = useState<Lang>(
     () =>
       langList.find((lang) => lang.url.replace("/", "") === currentLanguage) ||

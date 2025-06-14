@@ -12,7 +12,7 @@ import {
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
-import { useFormatter, useTranslations } from "next-intl";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { ImCross } from "react-icons/im";
 
 type CardProps = {
@@ -20,17 +20,38 @@ type CardProps = {
 };
 
 export default function Card({ cardData }: CardProps) {
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
-  const format = useFormatter();
   const t = useTranslations("components.Card");
+  const format = useFormatter();
+
+  const currentLanguage = locale.toLowerCase();
 
   const formatDate = (date: string) => {
-    const dateTime = new Date(date);
-    return format.dateTime(dateTime, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
+    const dateSplit = date.split("-");
+    const day = Number(dateSplit[0]);
+    const month = Number(dateSplit[1]);
+    const year = Number(dateSplit[2]);
+
+    if (day && month) {
+      const date = new Date(year, month + 1, day);
+      return format.dateTime(date, {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+      });
+    } else if (month) {
+      const date = new Date(year, month + 1, 1);
+      return format.dateTime(date, {
+        year: "numeric",
+        month: "short",
+      });
+    } else {
+      const date = new Date(year, 1, 1);
+      return format.dateTime(date, {
+        year: "numeric",
+      });
+    }
   };
 
   return (
@@ -83,7 +104,13 @@ export default function Card({ cardData }: CardProps) {
               </DialogTitle>
               <Description className="flex flex-col">
                 {cardData.description && (
-                  <span className="mb-5">{cardData.description}</span>
+                  <span className="mb-5">
+                    {
+                      cardData.description[
+                        currentLanguage as keyof typeof cardData.description
+                      ]
+                    }
+                  </span>
                 )}
               </Description>
             </div>
