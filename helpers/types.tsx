@@ -19,8 +19,8 @@ export type Log = {
 };
 
 type Description = {
-  en_us: string;
-  pt_br: string;
+  "en-us": string;
+  "pt-br": string;
 };
 
 export enum MediaTypeEnum {
