@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className="bg-pink-600 flex items-center justify-center min-h-[30px] text-sm gap-4">
       <p>{t("text")}</p>
-      <Link href={"https://github.com/"}>
+      <Link href={"https://github.com/yumiuehara/codex"} target="_blank">
         <FaGithub />
       </Link>
     </div>
