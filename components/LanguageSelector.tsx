@@ -34,7 +34,15 @@ export default function LanguageSelector({ className }: LanguageSelectorProps) {
   );
 
   const setLanguage = (value: Lang) => {
-    permanentRedirect(value.url);
+    const pathnameSplit = window.location.pathname.split("/");
+    const currentPagePath = pathnameSplit[pathnameSplit.length - 1];
+
+    const isHomePage = langList.every((lang: Lang) =>
+      lang.url.includes(currentPagePath)
+    );
+
+    if (isHomePage) permanentRedirect(value.url);
+    else permanentRedirect(`${value.url}/${currentPagePath}`);
   };
 
   useEffect(() => {
