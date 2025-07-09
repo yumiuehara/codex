@@ -19,7 +19,7 @@
       "manga": "{count, plural, =0 {mangás} =1 {# mangá} other {# mangás}}",
       "anime": "{count, plural, =0 {animes} =1 {# anime} other {# animes}}",
       "books": "{count, plural, =0 {livros} =1 {# livro} other {# livros}}",
-      "series": "{count} tv series",
+      "series": "{count} seriados",
       "movies": "{count, plural, =0 {filmes} =1 {# filme} other {# filmes}}",
       "games": "{count, plural, =0 {jogos} =1 {# jogo} other {# jogos}}"
     },

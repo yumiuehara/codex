@@ -377,5 +377,70 @@
         "startDate": "23-05-2025",
         "endDate": "23-05-2025",
         "like": false
+    },
+    {
+        "id": 34,
+        "media": {
+            "name":"The Lord of the Rings: The Fellowship of the Ring",
+            "image": "/content/movie/lotr_fellowship.webp",
+            "idMedia": 3
+        },
+        "startDate": "15-06-2025",
+        "endDate": "15-06-2025",
+        "like": false
+    },
+    {
+        "id": 35,
+        "media": {
+            "name":"The Lord of the Rings: The Two Towers",
+            "image": "/content/movie/lotr_two.webp",
+            "idMedia": 3
+        },
+        "startDate": "18-06-2025",
+        "endDate": "18-06-2025",
+        "like": false
+    },
+    {
+        "id": 36,
+        "media": {
+            "name":"The Lord of the Rings: The Return of the King",
+            "image": "/content/movie/lotr_return.webp",
+            "idMedia": 3
+        },
+        "startDate": "19-06-2025",
+        "endDate": "19-06-2025",
+        "like": false
+    },
+    {
+        "id": 37,
+        "media": {
+            "name":"Memories of Murder",
+            "image": "/content/movie/memories_of_murder.webp",
+            "idMedia": 3
+        },
+        "startDate": "06-07-2025",
+        "endDate": "06-07-2025",
+        "like": false
+    },
+    {
+        "id": 38,
+        "media": {
+            "name":"Umamusume",
+            "image": "/content/games/umamusume.webp",
+            "idMedia": 4
+        },
+        "startDate": "08-07-2025",
+        "like": false
+    },
+    {
+        "id": 39,
+        "media": {
+            "name":"Yami Shibai 14",
+            "image": "/content/anime/yami_shibai_14.webp",
+            "idMedia": 1
+        },
+        "startDate": "05-07-2025",
+        "endDate": "06-07-2025",
+        "like": false
     }
 ]
