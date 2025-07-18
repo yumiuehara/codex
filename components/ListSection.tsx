@@ -31,7 +31,7 @@ export default function ListSection({
     <section className="flex flex-col mx-10 my-5">
       <div className="flex justify-between items-center text-sm mb-5">
         {title && <h2 className="font-bold text-2xl uppercase">{title}</h2>}
-        {data.length > 4 && seeAllUrl && (
+        {data.length > 7 && seeAllUrl && (
           <Link href={seeAllUrl}>
             <button className="flex items-center">
               <span className="lowercase">{t("seeAll")}</span>

@@ -11,7 +11,7 @@ const gameList = logList.filter(
 export default function GamePage() {
   const t = useTranslations("pages");
   return (
-    <FullListLayout title={t("misc.anime")}>
+    <FullListLayout title={t("misc.games")}>
       <ListSection data={gameList} />
     </FullListLayout>
   );

@@ -442,5 +442,38 @@
         "startDate": "05-07-2025",
         "endDate": "06-07-2025",
         "like": false
+    },
+    {
+        "id": 40,
+        "media": {
+            "name":"The Green Mile",
+            "image": "/content/movie/the_green_mile.webp",
+            "idMedia": 3
+        },
+        "startDate": "08-07-2025",
+        "endDate": "08-07-2025",
+        "replay": true,
+        "like": false
+    },
+    {
+        "id": 41,
+        "media": {
+            "name":"Ghost Trick",
+            "image": "/content/games/ghost_trick.webp",
+            "idMedia": 4
+        },
+        "startDate": "11-07-2025",
+        "like": true,
+        "replay": true
+    },
+    {
+        "id": 42,
+        "media": {
+            "name":"Wind Breaker",
+            "image": "/content/anime/wind_breaker.webp",
+            "idMedia": 1
+        },
+        "startDate": "11-07-2025",
+        "like": false
     }
 ]

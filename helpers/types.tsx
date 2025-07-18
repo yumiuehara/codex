@@ -16,6 +16,7 @@ export type Log = {
   endDate?: string;
   description?: Description;
   like: boolean;
+  replay?: boolean;
 };
 
 type Description = {
