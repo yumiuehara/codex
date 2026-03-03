@@ -1,44 +1,46 @@
+import clsx from "clsx";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
-type InformationProps = {
+export type InformationProps = {
   movieCount: number;
   animeCount: number;
   bookCount: number;
   mangaCount: number;
   tvSeriesCount: number;
   gameCount: number;
+  customClass?: string
 };
 
 export default function Information({ ...props }: InformationProps) {
   const t = useTranslations("components.Information");
 
   return (
-    <section className="flex items-center justify-center border-b">
-      <div className="flex w-full flex-col md:flex-row">
-        <Image
-          src="/hero.webp"
-          width={0}
-          height={0}
-          alt=""
-          sizes="100vw"
-          className="w-[100%] md:w-[60%] h-auto"
-        />
-
-        <div className="flex flex-col text-white w-[100%] md:w-[40%] text-center md:text-right pt-5 md:pt-0 px-5 pb-5 justify-end">
-          <div className="font-bold text-xl md:text-7xl">
-            {t("yearSummary", { year: "2025" })}
-          </div>
-          <ul className="text-xl md:text-5xl">
-            <li>{t("games", { count: props.gameCount })}</li>
-            <li>{t("manga", { count: props.mangaCount })}</li>
-            <li>{t("anime", { count: props.animeCount })}</li>
-            <li>{t("movies", { count: props.movieCount })}</li>
-            <li>{t("series", { count: props.tvSeriesCount })}</li>
-            <li>{t("books", { count: props.bookCount })}</li>
-          </ul>
+    <div className={clsx("flex flex-col text-white md:w-[80%] w-[50%] self-center py-2.5 gap-y-2", props.customClass)}>
+        <div className="grid grid-cols-3 gap-x-2 lg:grid-cols-6 lg:gap-x-10 gap-y-5 place-items-center">
+            <InformationItem content={t("games", { count: props.gameCount })} />
+            <InformationItem content={t("manga", { count: props.mangaCount })} />
+            <InformationItem content={t("anime", { count: props.animeCount })} />
+            <InformationItem content={t("movies", { count: props.movieCount })} />
+            <InformationItem content={t("series", { count: props.tvSeriesCount })} />
+            <InformationItem content={t("books", { count: props.bookCount })} />
         </div>
+        
+    </div>
+  );
+}
+
+function InformationItem({content}: {content: string}) {
+  const number = content.match(/\d+/)?.[0] || "0";
+  const text = content.match(/\D+/)?.[0];
+
+  return (
+    <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] cursor-pointer shadow-sm border border-white hover:border-(--color-pink) group bg-black/40 transition-all flex flex-col items-center justify-center">
+      <span className="text-xs md:text-sm font-bold uppercase group-hover:text-black group-hover:bg-(--color-blue) px-1">
+        {text}
+      </span>
+      <div className="text-base md:text-5xl font-semibold mt-1 text-pink drop-shadow-md/50">
+        {number}
       </div>
-    </section>
+    </div>
   );
 }

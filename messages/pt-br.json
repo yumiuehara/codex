@@ -15,7 +15,7 @@
       "text": "desenvolvido com NextJS"
     },
     "Information": {
-      "yearSummary": "resumo de {year}",
+      "yearSummary": "Resumo de {year}",
       "manga": "{count, plural, =0 {mangás} =1 {# mangá} other {# mangás}}",
       "anime": "{count, plural, =0 {animes} =1 {# anime} other {# animes}}",
       "books": "{count, plural, =0 {livros} =1 {# livro} other {# livros}}",
@@ -24,7 +24,8 @@
       "games": "{count, plural, =0 {jogos} =1 {# jogo} other {# jogos}}"
     },
     "ListSection": {
-      "seeAll": "Ver todos"
+      "seeAll": "Ver todos",
+      "empty": "Nada!"
     },
     "Card": {
       "startDate": "início: {date}",

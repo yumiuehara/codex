@@ -17,6 +17,8 @@ export type Log = {
   description?: Description;
   like: boolean;
   replay?: boolean;
+  score?: number,
+  eternalSuffering?: boolean
 };
 
 type Description = {

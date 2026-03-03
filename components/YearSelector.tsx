@@ -7,60 +7,53 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import clsx from "clsx";
-import { useTranslations, useLocale } from "next-intl";
 import { permanentRedirect, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 
-type Lang = {
-  url: string;
-  name: string;
-};
-
-type LanguageSelectorProps = {
+type YearSelectorProps = {
   className?: string;
+  years: Set<number>
 };
 
-export default function LanguageSelector({ className }: LanguageSelectorProps) {
-  const t = useTranslations("components.LanguageSelector");
-  const langList: Lang[] = t.raw("languages");
+export default function YearSelector({ className, years }: YearSelectorProps) {
   const params = useParams<{ locale: string; year: string }>()
 
-  const currentLanguage = useLocale();
+  const yearsList = Array.from(years)
 
-  const [selected, setSelected] = useState<Lang>(
-    () =>
-      langList.find((lang) => lang.url.replace("/", "") === currentLanguage) ||
-      langList[0]
-  );
+  const [selected, setSelected] = useState<number>(
+      () =>
+        yearsList.find((year) => Number(params.year) === year) ||
+        yearsList[0]
+    );
 
-  const setLanguage = (value: Lang) => {
+  const setYear = (value: number) => {
     const pathnameSplit = window.location.pathname.split("/");
     const currentPagePath = pathnameSplit[pathnameSplit.length - 1];
 
     const isHomePage = !isNaN(Number(currentPagePath))
 
-    if (isHomePage) permanentRedirect(`${value.url}/${params.year}`);
-    else permanentRedirect(`${value.url}/${params.year}/${currentPagePath}`);
+    if (isHomePage) permanentRedirect(`/${value}`);
+    else permanentRedirect(`/${value}/${currentPagePath}`);
   };
 
   useEffect(() => {
     const newSelected =
-      langList.find((lang) => lang.url.replace("/", "") === currentLanguage) ||
-      langList[0];
+      yearsList.find((year) => Number(params.year) === year) ||
+      yearsList[0];
     setSelected(newSelected);
-  }, [currentLanguage, langList]);
+  }, [params.year, yearsList]);
 
   return (
     <div className={`${className} w-36`}>
-      <Listbox value={selected} onChange={setLanguage}>
+      <Listbox value={selected} onChange={setYear}>
         <ListboxButton
           className={clsx(
             "relative block w-full bg-(--color-dark-gray) border-white border border-l py-1.5 pr-8 pl-3 text-left text-sm/6 text-white",
             "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-black/25"
           )}
         >
-          {selected.name}
+          {selected}
           <BiChevronDown
             className="group pointer-events-none absolute top-2.5 right-2.5 size-4 fill-white/60"
             aria-hidden="true"
@@ -74,15 +67,15 @@ export default function LanguageSelector({ className }: LanguageSelectorProps) {
             "transition duration-100 ease-in"
           )}
         >
-          {langList
-            .filter((item) => item.name !== selected.name)
-            .map((lang) => (
+          {yearsList
+            .filter((item) => item !== selected)
+            .map((it, index) => (
               <ListboxOption
-                key={lang.name}
-                value={lang}
+                key={index}
+                value={it}
                 className="group flex cursor-pointer items-center gap-2 rounded-lg px-3 py-1 select-none "
               >
-                <div className="text-sm/6 text-white">{lang.name}</div>
+                <div className="text-sm/6 text-white">{it}</div>
               </ListboxOption>
             ))}
         </ListboxOptions>

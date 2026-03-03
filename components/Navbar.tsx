@@ -7,15 +7,19 @@ import LanguageSelector from "./LanguageSelector";
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { Transition } from "@headlessui/react";
+import { useParams } from "next/navigation";
+import YearSelector from "./YearSelector";
 
 type NavProps = {
   className?: string;
+  years: Set<number>
 };
 
-export default function Navbar({ className }: NavProps) {
+export default function Navbar({ className, years }: NavProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const t = useTranslations("components.Navbar");
   const locale = useLocale();
+  const params = useParams<{ locale: string; year: string }>()
   const links: [string, string][] = Object.entries(t.raw("links"));
 
   return (
@@ -23,7 +27,7 @@ export default function Navbar({ className }: NavProps) {
       className={`${className} flex items-center justify-between border-b py-2 px-5 relative`}
     >
       <Link
-        href={`/${locale}`}
+        href={`/${locale}/${params.year}`}
         className="text-3xl text-(--color-red) font-bold tracking-widest"
       >
         {t("title")}
@@ -32,7 +36,7 @@ export default function Navbar({ className }: NavProps) {
       <div className="hidden md:flex items-center justify-center text-sm">
         {links.map(([key, val]: [string, string], index: number) => (
           <div key={key} className="flex">
-            <Link href={`/${key}`} className="px-2">
+            <Link href={`/${params.year}/${key}`} className="px-2">
               {val}
             </Link>
 
@@ -41,7 +45,10 @@ export default function Navbar({ className }: NavProps) {
         ))}
       </div>
 
-      <LanguageSelector className="hidden md:flex" />
+      <div className="flex gap-x-2">
+        <YearSelector className="hidden md:flex" years={years} />
+        <LanguageSelector className="hidden md:flex" />
+      </div>
 
       <button className="flex md:hidden" onClick={() => setIsOpen(true)}>
         <GiHamburgerMenu />
@@ -57,7 +64,7 @@ export default function Navbar({ className }: NavProps) {
             <div className="flex flex-col items-center justify-center h-full gap-y-10">
               {links.map(([key, val]: [string, string]) => (
                 <Link
-                  href={`/${key}`}
+                  href={`/${params.year}/${key}`}
                   key={key}
                   className="px-2"
                   onClick={() => setIsOpen(false)}
