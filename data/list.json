@@ -709,5 +709,16 @@
         "startDate": "00-02-2026",
         "like": false,
         "score": 3
+    },
+    {
+        "id": 63,
+        "media": {
+            "name":"The wrong trousers",
+            "image": "/default.webp",
+            "idMedia": 3
+        },
+        "startDate": "00-02-2026",
+        "like": true,
+        "score": 3
     }
 ]
