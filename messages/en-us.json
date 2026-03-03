@@ -15,7 +15,7 @@
       "text": "developed with NextJS"
     },
     "Information": {
-      "yearSummary": "{year} summary",
+      "yearSummary": "{year} Summary",
       "manga": "{count} manga",
       "anime": "{count} anime",
       "books": "{count, plural, =0 {books} =1 {# book} other {# books}}",

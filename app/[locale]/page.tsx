@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero";
 import Information from "@/components/Information";
 import ListSection from "@/components/ListSection";
 import logList from "@/data/list.json";
@@ -29,7 +30,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-y-5">
-      <Information
+      <Hero
         animeCount={animeList.length}
         bookCount={bookList.length}
         gameCount={gameList.length}
@@ -39,36 +40,42 @@ export default function Home() {
       />
 
       <ListSection
+        customClass="mx-10 my-5"
         title={t("misc.anime")}
         data={animeList}
         seeAllUrl={`${locale}/anime`}
         sliceItems
       />
       <ListSection
+        customClass="mx-10 my-5"
         title={t("misc.manga")}
         data={mangaList}
         seeAllUrl={`${locale}/manga`}
         sliceItems
       />
       <ListSection
+        customClass="mx-10 my-5"
         title={t("misc.movies")}
         data={movieList}
         seeAllUrl={`${locale}/movies`}
         sliceItems
       />
       <ListSection
+        customClass="mx-10 my-5"
         title={t("misc.games")}
         data={gameList}
         seeAllUrl={`${locale}/games`}
         sliceItems
       />
       <ListSection
+        customClass="mx-10 my-5"
         title={t("misc.series")}
         data={seriesList}
         seeAllUrl={`${locale}/series`}
         sliceItems
       />
       <ListSection
+        customClass="mx-10 my-5"
         title={t("misc.books")}
         data={bookList}
         seeAllUrl={`${locale}/books`}

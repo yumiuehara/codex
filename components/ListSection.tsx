@@ -3,12 +3,14 @@ import Card from "./Card";
 import { MdChevronRight } from "react-icons/md";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import clsx from "clsx";
 
 type ListSectionProps = {
   title?: string;
   data: Log[];
   seeAllUrl?: string;
   sliceItems?: boolean;
+  customClass?: string
 };
 
 const rowMinSize = 7;
@@ -18,6 +20,7 @@ export default function ListSection({
   data,
   seeAllUrl,
   sliceItems,
+  customClass
 }: ListSectionProps) {
   const t = useTranslations("components.ListSection");
 
@@ -28,7 +31,7 @@ export default function ListSection({
   const fillRows = list.length < rowMinSize || !isMultiple;
 
   return (
-    <section className="flex flex-col mx-10 my-5">
+    <section className={clsx("flex flex-col", customClass)}>
       <div className="flex justify-between items-center text-sm mb-5">
         {title && <h2 className="font-bold text-2xl uppercase">{title}</h2>}
         {data.length > 7 && seeAllUrl && (
