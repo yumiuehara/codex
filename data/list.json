@@ -475,5 +475,16 @@
         },
         "startDate": "11-07-2025",
         "like": false
+    },
+    {
+        "id": 43,
+        "media": {
+            "name":"Replica",
+            "image": "/content/anime/wind_breaker.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-01-2026",
+        "like": false,
+        "score": 4
     }
 ]

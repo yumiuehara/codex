@@ -2,7 +2,7 @@ import Image from "next/image";
 import Information from "./Information";
 import type { InformationProps } from "./Information";
 
-export default function Hero({...props}: InformationProps) {
+export default function Hero({year, ...props}: {year: string} & InformationProps) {
   return (
     <section className="flex items-center justify-center border-b relative">
       <Image
@@ -14,9 +14,9 @@ export default function Hero({...props}: InformationProps) {
         className="w-[100%] h-[350px] object-cover"
       />
 
-      <div className="absolute font-bold text-9xl leading flex flex-col items-center justify-center w-[100%] h-[100%]">
+      <div className="absolute font-bold text-9xl leading flex flex-col items-center justify-center w-[100%] h-[100%] backdrop-contrast-50">
         <span className="drop-shadow-lg bg-linear-to-bl from-(--color-pink) via-(--color-red) to-(--color-pink) bg-clip-text text-transparent">
-          2025
+          {year}
         </span>
         <Information {...props}  />
       </div>
