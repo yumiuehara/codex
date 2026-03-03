@@ -6,7 +6,7 @@ export default function Hero({year, ...props}: {year: string} & InformationProps
   return (
     <section className="flex items-center justify-center border-b relative">
       <Image
-        src="/hero.webp"
+        src={`/hero-${year}.webp`}
         width={0}
         height={0}
         alt=""

@@ -24,7 +24,8 @@
       "games": "{count, plural, =0 {games} =1 {# game} other {# games}}"
     },
     "ListSection": {
-      "seeAll": "See all"
+      "seeAll": "See all",
+      "empty": "Nothing to see here!"
     },
     "Card": {
       "startDate": "start date: {date}",

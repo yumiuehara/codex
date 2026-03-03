@@ -38,9 +38,7 @@ export default function LanguageSelector({ className }: LanguageSelectorProps) {
     const pathnameSplit = window.location.pathname.split("/");
     const currentPagePath = pathnameSplit[pathnameSplit.length - 1];
 
-    const isHomePage = langList.some((lang: Lang) =>
-      lang.url.includes(currentPagePath)
-    );
+    const isHomePage = !isNaN(Number(currentPagePath))
 
     if (isHomePage) permanentRedirect(`${value.url}/${params.year}`);
     else permanentRedirect(`${value.url}/${params.year}/${currentPagePath}`);

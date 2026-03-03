@@ -48,7 +48,9 @@ export default function ListSection({
         {list.length > 0 &&
           list.map((log) => <Card cardData={log} key={log.id} />)}
 
-        {fillRows &&
+        {list.length == 0 && <div>{t('empty')}</div>}
+
+        {list.length > 0 && fillRows &&
           Array(Math.abs(rowMinSize - (list.length % rowMinSize)))
             .fill(0)
             .map((_, i) => (
