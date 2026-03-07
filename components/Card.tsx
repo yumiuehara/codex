@@ -2,7 +2,7 @@
 
 import { Log } from "@/helpers/types";
 import Image from "next/image";
-import { GoHeartFill } from "react-icons/go";
+import { GoHeartFill, GoInfinity } from "react-icons/go";
 
 import { useState } from "react";
 import {
@@ -13,7 +13,9 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
-import { ImCross } from "react-icons/im";
+import { ImCross, ImHeartBroken } from "react-icons/im";
+import StarRating from "./StarRating";
+import { RiLoopRightLine } from "react-icons/ri";
 
 type CardProps = {
   cardData: Log;
@@ -34,14 +36,14 @@ export default function Card({ cardData }: CardProps) {
     const year = Number(dateSplit[2]);
 
     if (day && month) {
-      const date = new Date(year, month + 1, day);
+      const date = new Date(year, month - 1, day);
       return format.dateTime(date, {
         year: "numeric",
         month: "numeric",
         day: "numeric",
       });
     } else if (month) {
-      const date = new Date(year, month + 1, 1);
+      const date = new Date(year, month - 1, 1);
       return format.dateTime(date, {
         year: "numeric",
         month: "short",
@@ -74,11 +76,22 @@ export default function Card({ cardData }: CardProps) {
             {cardData.media.name}
           </span>
         </div>
-        {cardData.like && (
-          <div className="absolute top-0 px-2 py-1.5">
-            <GoHeartFill className="text-red-500 stroke-white stroke-1" />
-          </div>
-        )}
+        <div className="flex gap-x-1 absolute top-0 px-2 py-1.5">
+          {cardData.like && (
+            <GoHeartFill className="text-red-500 stroke-white stroke-1 w-3 h-3" />
+          )}
+          {cardData.replay && (
+            <RiLoopRightLine className="text-green-500 stroke-white stroke-1 w-3 h-3" />
+          )}
+          
+          {cardData.eternalSuffering && (
+            <GoInfinity className="text-blue-500 stroke-white stroke-1 w-3 h-3" />
+          )}
+
+          {cardData.hate && (
+            <ImHeartBroken className="text-purple-500 stroke-white stroke-1 w-3 h-3" />
+          )}
+        </div>
       </button>
 
       <Dialog
@@ -97,11 +110,36 @@ export default function Card({ cardData }: CardProps) {
           >
             <div>
               <CloseButton className="float-right">
-                <ImCross className="text-white w-6 h-6 stroke-red-500 stroke-[1.5]" />
+                <ImCross className="text-red-500 w-6 h-6" />
               </CloseButton>
-              <DialogTitle className="font-bold text-xl uppercase mb-5">
+              <DialogTitle className="font-bold text-xl uppercase mb-2">
                 {cardData.media.name}
               </DialogTitle>
+
+              <div className="flex flex-col gap-y-2">
+                {cardData.score && (
+                    <StarRating defaultValue={cardData.score} />
+                )}
+
+                <div className="flex items-center gap-x-2 mb-5">
+                  {cardData.like && (
+                    <GoHeartFill className="text-red-500 w-3 h-3" />
+                  )}
+
+                  {cardData.replay && (
+                    <RiLoopRightLine className="text-green-500 w-3 h-3" />
+                  )}
+                  
+                  {cardData.eternalSuffering && (
+                    <GoInfinity className="text-blue-500 w-3 h-3" />
+                  )}
+
+                  {cardData.hate && (
+                    <ImHeartBroken className="text-purple-500 w-3 h-3" />
+                  )}
+                </div>
+              </div>
+
               <Description className="flex flex-col">
                 {cardData.description && (
                   <span className="mb-5">
@@ -115,14 +153,8 @@ export default function Card({ cardData }: CardProps) {
               </Description>
             </div>
 
-            <div className="flex justify-between items-center">
-              {cardData.like ? (
-                <GoHeartFill className="text-red-500 stroke-white stroke-1" />
-              ) : (
-                <div />
-              )}
-
-              <div className="flex flex-col items-end">
+            <div className="flex items-center">
+              <div className="flex flex-col items-start">
                 <span className="text-sm">
                   {t("startDate", { date: formatDate(cardData.startDate) })}
                 </span>

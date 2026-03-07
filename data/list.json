@@ -480,7 +480,7 @@
         "id": 43,
         "media": {
             "name":"Replica",
-            "image": "/default.webp",
+            "image": "/content/games/replica.webp",
             "idMedia": 4
         },
         "startDate": "00-01-2026",
@@ -492,7 +492,7 @@
         "id": 44,
         "media": {
             "name":"Counter Strike 2",
-            "image": "/default.webp",
+            "image": "/content/games/cs2.webp",
             "idMedia": 4
         },
         "startDate": "00-01-2026",
@@ -504,55 +504,60 @@
         "id": 45,
         "media": {
             "name":"Ace Attorney: Justice For All",
-            "image": "/default.webp",
+            "image": "/content/games/aajfa.webp",
             "idMedia": 4
         },
         "startDate": "00-01-2026",
+        "endDate": "00-01-2026",
         "like": true,
-        "score": 4,
+        "score": 5,
         "replay": true
     },
     {
         "id": 46,
         "media": {
             "name":"The Office",
-            "image": "/default.webp",
+            "image": "/content/series/the_office.webp",
             "idMedia": 5
         },
         "startDate": "00-00-2026",
-        "like": false,
-        "score": 4,
+        "like": true,
+        "score": 5,
         "eternalSuffering": true
     },
     {
         "id": 47,
         "media": {
-            "name":"Super Mega Baseball 3",
-            "image": "/default.webp",
+            "name":"Super Mega Baseball 2",
+            "image": "/content/games/smb2.webp",
             "idMedia": 4
         },
         "startDate": "00-01-2026",
         "like": false,
-        "score": 4
+        "replay": true
     },
     {
         "id": 48,
         "media": {
             "name":"A date with death",
-            "image": "/default.webp",
+            "image": "/content/games/dwd.webp",
             "idMedia": 4
         },
         "startDate": "00-01-2026",
         "endDate": "00-01-2026",
         "like": false,
-        "score": 4
+        "score": 1
     },
     {
         "id": 49,
         "media": {
             "name":"Amnesia: Memories",
-            "image": "/default.webp",
+            "image": "/content/games/amnesia.webp",
             "idMedia": 4
+        },
+        "description": {
+            "en-us": "",
+            "pt-br": "Eu sabia que ia ser ruim e fui lá e joguei 1 rota do Ken. Impressionante."
         },
         "startDate": "00-01-2026",
         "like": false,
@@ -562,10 +567,11 @@
         "id": 50,
         "media": {
             "name":"Willy's Wonderland",
-            "image": "/default.webp",
+            "image": "/content/movie/ww.webp",
             "idMedia": 3
         },
         "startDate": "00-01-2026",
+        "endDate": "00-01-2026",
         "like": false,
         "score": 3
     },
@@ -573,56 +579,54 @@
         "id": 51,
         "media": {
             "name":"28 Days Later",
-            "image": "/default.webp",
+            "image": "/content/movie/28dl.webp",
             "idMedia": 3
         },
         "startDate": "00-01-2026",
         "endDate": "00-01-2026",
-        "like": false,
-        "score": 2
+        "like": false
     },
     {
         "id": 52,
         "media": {
             "name":"28 Weeks Later",
-            "image": "/default.webp",
+            "image": "/content/movie/28wl.webp",
             "idMedia": 3
         },
         "startDate": "00-01-2026",
         "endDate": "00-01-2026",
         "like": false,
-        "score": 1
+        "hate": true
     },
     {
         "id": 53,
         "media": {
             "name":"28 Years Later",
-            "image": "/default.webp",
+            "image": "/content/movie/28yl.webp",
             "idMedia": 3
         },
         "startDate": "00-01-2026",
         "endDate": "00-01-2026",
-        "like": false,
-        "score": 3
+        "like": false
     },
     {
         "id": 54,
         "media": {
             "name":"The Lord of the Rings: The Fellowship of the Ring",
-            "image": "/default.webp",
+            "image": "/content/movie/lotr_fellowship.webp",
             "idMedia": 3
         },
         "startDate": "00-01-2026",
         "endDate": "00-01-2026",
         "like": false,
-        "score": 3,
+        "score": 5,
         "replay": true
     },
     {
         "id": 55,
         "media": {
             "name":"Despicable Me 4",
-            "image": "/default.webp",
+            "image": "/content/movie/dm4.webp",
             "idMedia": 3
         },
         "startDate": "00-02-2026",
@@ -634,91 +638,89 @@
         "id": 56,
         "media": {
             "name":"Ace Attorney: Trials and Tribulations",
-            "image": "/default.webp",
+            "image": "/content/games/aatt.webp",
             "idMedia": 4
         },
         "startDate": "00-02-2026",
         "like": true,
-        "score": 3,
         "replay": true
     },
     {
         "id": 57,
         "media": {
             "name":"Se7en",
-            "image": "/default.webp",
+            "image": "/content/movie/7.webp",
             "idMedia": 3
         },
         "startDate": "00-02-2026",
-        "like": false,
-        "score": 3
+        "endDate": "00-02-2026",
+        "like": false
     },
     {
         "id": 58,
         "media": {
             "name":"Captivated by you",
-            "image": "/default.webp",
+            "image": "/content/manga/cby.webp",
             "idMedia": 2
         },
         "startDate": "00-02-2026",
         "endDate": "00-02-2026",
-        "like": true,
-        "score": 3
+        "like": true
     },
     {
         "id": 59,
         "media": {
             "name":"Overwatch",
-            "image": "/default.webp",
+            "image": "/content/games/ow.webp",
             "idMedia": 4
         },
         "startDate": "00-02-2026",
         "eternalSuffering": true,
         "like": false,
-        "score": 3
+        "replay": true
     },
     {
         "id": 60,
         "media": {
             "name":"Deep Rock Galactic",
-            "image": "/default.webp",
+            "image": "/content/games/drg.webp",
             "idMedia": 4
         },
         "startDate": "00-02-2026",
-        "like": true,
-        "score": 3
+        "like": true
     },
     {
         "id": 61,
         "media": {
             "name":"Hiraeth",
-            "image": "/default.webp",
+            "image": "/content/manga/hiraeth.webp",
             "idMedia": 2
         },
         "startDate": "00-02-2026",
-        "like": false,
-        "score": 3
+        "endDate": "00-02-2026",
+        "like": false
     },
     {
         "id": 62,
         "media": {
             "name":"Ikoku Nikki",
-            "image": "/default.webp",
+            "image": "/content/manga/in.webp",
             "idMedia": 2
         },
         "startDate": "00-02-2026",
-        "like": false,
-        "score": 3
+        "endDate": "07-03-2026",
+        "like": true,
+        "score": 5
     },
     {
         "id": 63,
         "media": {
             "name":"The wrong trousers",
-            "image": "/default.webp",
+            "image": "/content/movie/wrong.webp",
             "idMedia": 3
         },
         "startDate": "00-02-2026",
-        "like": true,
-        "score": 3
+        "endDate": "00-02-2026",
+        "like": true
     }
 ]
