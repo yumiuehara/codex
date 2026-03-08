@@ -676,8 +676,7 @@
         },
         "startDate": "00-02-2026",
         "eternalSuffering": true,
-        "like": false,
-        "replay": true
+        "like": false
     },
     {
         "id": 60,
@@ -722,5 +721,381 @@
         "startDate": "00-02-2026",
         "endDate": "00-02-2026",
         "like": true
+    },
+    {
+        "id": 64,
+        "media": {
+            "name":"Kingsman",
+            "image": "/content/movie/kingsman.webp",
+            "idMedia": 3
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
+        "like": true
+    },
+    {
+        "id": 65,
+        "media": {
+            "name":"Kingsman: The Golden Circle",
+            "image": "/content/movie/kingsman2.webp",
+            "idMedia": 3
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
+        "hate": true,
+        "description": {
+            "pt-br": "Deus nos abandonou."
+        }
+    },
+    {
+        "id": 66,
+        "media": {
+            "name":"Chiikawa",
+            "image": "/content/anime/chiikawa.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "like": true
+    },
+    {
+        "id": 67,
+        "media": {
+            "name":"Wind Breaker 2",
+            "image": "/content/anime/wb2.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 68,
+        "media": {
+            "name":"Terminull Brigade",
+            "image": "/content/games/tb.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025"
+    },
+    {
+        "id": 69,
+        "media": {
+            "name":"Solo Leveling",
+            "image": "/content/anime/sl.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
+        "hate": true
+    },
+    {
+        "id": 70,
+        "media": {
+            "name":"Frieren at the Funeral",
+            "image": "/content/anime/frieren.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 71,
+        "media": {
+            "name":"Demon Slayer",
+            "image": "/content/manga/ds.webp",
+            "idMedia": 2
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
+        "hate": true
+    },
+    {
+        "id": 72,
+        "media": {
+            "name":"Weapons",
+            "image": "/content/movie/weapons.webp",
+            "idMedia": 3
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 74,
+        "media": {
+            "name":"Demon Slayer Entertainment District Arc",
+            "image": "/content/anime/ds_ent.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 75,
+        "media": {
+            "name":"Demon Slayer Swordsmith Village Arc",
+            "image": "/content/anime/ds_sv.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 76,
+        "media": {
+            "name":"Demon Slayer Movie: Infinity Castle",
+            "image": "/content/anime/ds_castle.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 77,
+        "media": {
+            "name":"Hunter x Hunter (2011)",
+            "image": "/content/anime/hxh.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2024",
+        "endDate": "00-00-2025",
+        "replay": true,
+        "like": true
+    },
+    {
+        "id": 78,
+        "media": {
+            "name":"Hobbit",
+            "image": "/content/book/hobbit.webp",
+            "idMedia": 6
+        },
+        "startDate": "00-00-2025"
+    },
+    {
+        "id": 79,
+        "media": {
+            "name":"Demon Slayer Hashira Training Arc",
+            "image": "/content/anime/ds_h.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 80,
+        "media": {
+            "name":"Hotel Dusk Room 215",
+            "image": "/content/games/hd.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025"
+    },
+    {
+        "id": 81,
+        "media": {
+            "name":"City The Animation",
+            "image": "/content/anime/city.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 82,
+        "media": {
+            "name":"Witch Hat Atelier",
+            "image": "/content/manga/wha.webp",
+            "idMedia": 2
+        },
+        "startDate": "00-00-2025"
+    },
+    {
+        "id": 83,
+        "media": {
+            "name":"Let's go karaoke",
+            "image": "/content/manga/karaoke.webp",
+            "idMedia": 2
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 84,
+        "media": {
+            "name":"AI: The somnium files",
+            "image": "/content/games/ai.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 85,
+        "media": {
+            "name":"Rookies",
+            "image": "/content/manga/rookies.webp",
+            "idMedia": 2
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
+        "like": true
+    },
+    {
+        "id": 86,
+        "media": {
+            "name":"Sore wa tada no senpai no chinko",
+            "image": "/content/manga/pinto.webp",
+            "idMedia": 2
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 87,
+        "media": {
+            "name":"No case should remain unsolved",
+            "image": "/content/games/nocase.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
+        "like": true
+    },
+    {
+        "id": 88,
+        "media": {
+            "name":"Legend of the galactic heroes: My Conquest Is the Sea of Stars",
+            "image": "/content/anime/conquest.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 89,
+        "media": {
+            "name":"Legend of the galactic heroes: Overture to a New War",
+            "image": "/content/anime/overture.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 90,
+        "media": {
+            "name":"Legend of the galactic heroes ova",
+            "image": "/content/anime/logh.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025"
+    },
+    {
+        "id": 91,
+        "media": {
+            "name":"Chainsaw Man Movie: Reze-hen",
+            "image": "/content/anime/reze.webp",
+            "idMedia": 1
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 92,
+        "media": {
+            "name":"Glass Onion",
+            "image": "/content/movie/glassonion.webp",
+            "idMedia": 3
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 93,
+        "media": {
+            "name":"Ace Attorney: Phoenix Wright",
+            "image": "/content/games/aapw.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025",
+        "like": true,
+        "replay": true
+    },
+    {
+        "id": 94,
+        "media": {
+            "name":"Final Fantasy XIV",
+            "image": "/content/games/ff14.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025",
+        "eternalSuffering": true
+    },
+    {
+        "id": 95,
+        "media": {
+            "name":"Muse Dash",
+            "image": "/content/games/musedash.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025",
+        "eternalSuffering": true
+    },
+    {
+        "id": 96,
+        "media": {
+            "name":"Overwatch",
+            "image": "/content/games/ow.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025",
+        "eternalSuffering": true
+    },
+    {
+        "id": 97,
+        "media": {
+            "name":"Sonic Racing CrossWorlds [demo]",
+            "image": "/content/games/sonic.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025",
+        "endDate": "00-00-2025"
+    },
+    {
+        "id": 98,
+        "media": {
+            "name":"Risk of Rain 2",
+            "image": "/content/games/ror2.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025",
+        "eternalSuffering": true,
+        "like": true
+    },
+    {
+        "id": 99,
+        "media": {
+            "name":"Gunfire Reborn",
+            "image": "/content/games/gr.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025"
+    },
+    {
+        "id": 100,
+        "media": {
+            "name":"Mini Cozy Room [demo]",
+            "image": "/content/games/mcr.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025"
+    },
+    {
+        "id": 101,
+        "media": {
+            "name":"The Outlast Trials",
+            "image": "/content/games/outlast.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-00-2025"
     }
 ]

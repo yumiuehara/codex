@@ -153,6 +153,7 @@ export default function Card({ cardData }: CardProps) {
               </Description>
             </div>
 
+            {!cardData.eternalSuffering && (cardData.startDate || cardData.endDate) && 
             <div className="flex items-center">
               <div className="flex flex-col items-start">
                 <span className="text-sm">
@@ -165,6 +166,8 @@ export default function Card({ cardData }: CardProps) {
                 )}
               </div>
             </div>
+          }
+            
           </DialogPanel>
         </div>
       </Dialog>
