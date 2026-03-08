@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Don Valentino",
+        "source": "Cuticle Tantei Inaba",
+        "img": "/content/favorite/don_valentino.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Ginko",
+        "source": "Mushishi",
+        "img": "/content/favorite/don_valentino.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Art",
+        "source": "Terrifier",
+        "img": "/content/favorite/don_valentino.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Mushishi",
+        "source": "Manga",
+        "img": "/content/favorite/don_valentino.webp",
+        "favoriteType": "MANGA"
+    }
+]
