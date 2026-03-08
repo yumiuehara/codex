@@ -5,10 +5,16 @@ import ListSection from "@/components/ListSection";
 import logList from "@/data/list.json";
 import { getYearFromCustomDate } from "@/helpers/dates";
 import { MediaTypeEnum } from "@/helpers/types";
-import { useParams } from 'next/navigation'
+import { notFound, useParams } from 'next/navigation'
+
+const validYears = new Set<number>(logList.map(item => getYearFromCustomDate(item.endDate || item.startDate)));
 
 export default function Home() {
   const params = useParams<{ locale: string; year: string }>()
+
+  if (!/^\d{4}$/.test(params.year) || !validYears.has(Number(params.year))) {
+    notFound();
+  }
 
   const filteredLogs = logList.filter((log) => {
     const start = String(getYearFromCustomDate(log.startDate));

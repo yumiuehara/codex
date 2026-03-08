@@ -8,7 +8,8 @@
         "games": "jogos",
         "books": "livros",
         "series": "séries",
-        "movies": "filmes"
+        "movies": "filmes",
+        "favorite": "favoritos"
       }
     },
     "Footer": {

@@ -8,7 +8,7 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import clsx from "clsx";
-import { permanentRedirect, useParams } from "next/navigation";
+import { permanentRedirect, useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import logList from "@/data/list.json";
@@ -20,6 +20,7 @@ type YearSelectorProps = {
 export default function YearSelector({ className }: YearSelectorProps) {
   const years = new Set<number>(logList.map(item => getYearFromCustomDate(item.endDate || item.startDate)));
   const params = useParams<{ locale: string; year: string }>()
+  const pathname = usePathname()
 
   const yearsList = Array.from(years)
 
@@ -30,13 +31,15 @@ export default function YearSelector({ className }: YearSelectorProps) {
     );
 
   const setYear = (value: number) => {
-    const pathnameSplit = window.location.pathname.split("/");
-    const currentPagePath = pathnameSplit[pathnameSplit.length - 1];
+    const pathnameSplit = pathname.split("/");
+    const currentYearIndex = pathnameSplit.findIndex(it => it == params.year)
 
-    const isHomePage = !isNaN(Number(currentPagePath))
-
-    if (isHomePage) permanentRedirect(`/${value}`);
-    else permanentRedirect(`/${value}/${currentPagePath}`);
+    if (currentYearIndex >= 0) {
+      pathnameSplit[currentYearIndex] = String(value)
+      permanentRedirect(pathnameSplit.join("/"))
+    } else {
+      permanentRedirect("/")
+    }
   };
 
   useEffect(() => {

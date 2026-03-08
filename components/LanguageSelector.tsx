@@ -8,7 +8,7 @@ import {
 } from "@headlessui/react";
 import clsx from "clsx";
 import { useTranslations, useLocale } from "next-intl";
-import { permanentRedirect, useParams } from "next/navigation";
+import { permanentRedirect, useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 
@@ -24,8 +24,8 @@ type LanguageSelectorProps = {
 export default function LanguageSelector({ className }: LanguageSelectorProps) {
   const t = useTranslations("components.LanguageSelector");
   const langList: Lang[] = t.raw("languages");
-  const params = useParams<{ locale: string; year: string }>()
-
+  const params = useParams<{ locale: string; year: string, slug: string }>()
+  const pathname = usePathname()
   const currentLanguage = useLocale();
 
   const [selected, setSelected] = useState<Lang>(
@@ -35,13 +35,12 @@ export default function LanguageSelector({ className }: LanguageSelectorProps) {
   );
 
   const setLanguage = (value: Lang) => {
-    const pathnameSplit = window.location.pathname.split("/");
-    const currentPagePath = pathnameSplit[pathnameSplit.length - 1];
+    const pathnameSplit = pathname.split("/").filter(it => it);
 
-    const isHomePage = !isNaN(Number(currentPagePath))
+    const currentLangIndex = pathnameSplit.findIndex(it => it == params.locale)
+    pathnameSplit[currentLangIndex] = value.url
 
-    if (isHomePage) permanentRedirect(`${value.url}/${params.year}`);
-    else permanentRedirect(`${value.url}/${params.year}/${currentPagePath}`);
+    permanentRedirect(pathnameSplit.join("/"))
   };
 
   useEffect(() => {
