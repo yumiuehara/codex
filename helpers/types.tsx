@@ -15,7 +15,7 @@ export type Log = {
   startDate: string;
   endDate?: string;
   description?: Description;
-  like: boolean;
+  like?: boolean;
   replay?: boolean;
   score?: number,
   eternalSuffering?: boolean
@@ -23,8 +23,8 @@ export type Log = {
 };
 
 type Description = {
-  "en-us": string;
-  "pt-br": string;
+  "en-us"?: string;
+  "pt-br"?: string;
 };
 
 export enum MediaTypeEnum {
