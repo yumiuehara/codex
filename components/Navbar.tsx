@@ -22,7 +22,7 @@ export default function Navbar({ className }: NavProps) {
   const currentYear = params.year || new Date().getFullYear();
 
   const buildUrl = (key?: string, index?: number) => {
-    if (key && index) {
+    if (key && index !== undefined) {
       if (index <= links.length - 2) {
         return `/${locale}/${currentYear}/${key}`
       } else {

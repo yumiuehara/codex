@@ -59,7 +59,8 @@
       "notFoundImageAlt": "Namazu confuso com uma interrogação e o texto em inglês HUH"
     },
     "FavoritePage": {
-      "favorites": "favoritos"
+      "favorites": "favoritos",
+      "CHARACTER": "Personagens"
     }
   }
 }

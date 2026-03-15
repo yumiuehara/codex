@@ -8,19 +8,61 @@
     {
         "name": "Ginko",
         "source": "Mushishi",
-        "img": "/content/favorite/don_valentino.webp",
+        "img": "/content/favorite/ginko.webp",
         "favoriteType": "CHARACTER"
     },
     {
         "name": "Art",
         "source": "Terrifier",
-        "img": "/content/favorite/don_valentino.webp",
+        "img": "/content/favorite/art.webp",
         "favoriteType": "CHARACTER"
     },
     {
-        "name": "Mushishi",
-        "source": "Manga",
-        "img": "/content/favorite/don_valentino.webp",
-        "favoriteType": "MANGA"
+        "name": "Tomochika Wakana",
+        "source": "Rookies",
+        "img": "/content/favorite/wakana.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Rena Ryuuguu",
+        "source": "Higurashi no Naku no Koro ni",
+        "img": "/content/favorite/rena.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Shiro",
+        "source": "Hoozuki no Reitetsu",
+        "img": "/content/favorite/shiro.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Kamille Bidan",
+        "source": "Mobile Suit Gundam",
+        "img": "/content/favorite/kamille.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Diego Brando",
+        "source": "JJBA: SBR",
+        "img": "/content/favorite/diego.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Hisashi Mitsui",
+        "source": "Slam Dunk",
+        "img": "/content/favorite/hisashi.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Knuckle Bine",
+        "source": "Hunter x Hunter",
+        "img": "/content/favorite/knuckle.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
+        "name": "Uvogin",
+        "source": "Hunter x Hunter",
+        "img": "/content/favorite/uvogin.webp",
+        "favoriteType": "CHARACTER"
     }
 ]
