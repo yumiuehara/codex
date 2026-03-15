@@ -57,6 +57,9 @@
     "NotFoundPage": {
       "message": "Página não encontrada!",
       "notFoundImageAlt": "Namazu confuso com uma interrogação e o texto em inglês HUH"
+    },
+    "FavoritePage": {
+      "favorites": "favoritos"
     }
   }
 }
