@@ -57,6 +57,9 @@
     "NotFoundPage": {
       "message": "Page not found!",
       "notFoundImageAlt": "Confused namazu from FFXIV with a question mark and a HUH text"
+    },
+    "FavoritePage": {
+      "favorites": "favorites"
     }
   }
 }

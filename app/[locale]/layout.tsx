@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
