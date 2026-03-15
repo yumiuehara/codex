@@ -1097,5 +1097,31 @@
             "idMedia": 4
         },
         "startDate": "00-00-2025"
+    },
+    {
+        "id": 102,
+        "media": {
+            "name":"Casas estranhas",
+            "image": "/content/book/casas_estranhas.webp",
+            "idMedia": 6
+        },
+        "startDate": "00-03-2026",
+        "endDate": "00-03-2025",
+        "description": {
+            "pt-br": "Gostei da ideia, mas não da execução. O arquiteto devia mudar de emprego, descobriu o mistério no começo do livro. Ele é muito bom mesmo, parabéns."
+        },
+        "score": 3
+    },
+    {
+        "id": 103,
+        "media": {
+            "name":"Casas estranhas 2",
+            "image": "/content/book/casas_estranhas_2.webp",
+            "idMedia": 6
+        },
+        "startDate": "00-03-2026",
+        "description": {
+            "pt-br": "Tem o dobro de páginas que o primeiro, espero que seja 2x melhor."
+        }
     }
 ]
