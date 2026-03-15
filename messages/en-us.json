@@ -59,7 +59,8 @@
       "notFoundImageAlt": "Confused namazu from FFXIV with a question mark and a HUH text"
     },
     "FavoritePage": {
-      "favorites": "favorites"
+      "favorites": "favorites",
+      "CHARACTER": "Characters"
     }
   }
 }
