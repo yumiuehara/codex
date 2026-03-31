@@ -1120,8 +1120,66 @@
             "idMedia": 6
         },
         "startDate": "00-03-2026",
+        "endDate": "00-03-2026",
         "description": {
-            "pt-br": "Tem o dobro de páginas que o primeiro, espero que seja 2x melhor."
+            "pt-br": "É ok acho."
         }
+    },
+    {
+        "id": 104,
+        "media": {
+            "name":"Imagens Estranhas",
+            "image": "/content/book/ie.webp",
+            "idMedia": 6
+        },
+        "startDate": "00-03-2026",
+        "endDate": "00-03-2026"
+    },
+    {
+        "id": 105,
+        "media": {
+            "name":"The creepy and freaky",
+            "image": "/content/manga/cf.webp",
+            "idMedia": 2
+        },
+        "startDate": "00-03-2026"
+    },
+    {
+        "id": 106,
+        "media": {
+            "name":"The Night Beyond the Tricornered Window",
+            "image": "/content/manga/sankaku.webp",
+            "idMedia": 2
+        },
+        "startDate": "00-03-2026",
+        "endDate": "00-03-2026"
+    },
+    {
+        "id": 107,
+        "media": {
+            "name":"Organized Inside",
+            "image": "/content/games/organized.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-03-2026",
+        "endDate": "00-03-2026"
+    },
+    {
+        "id": 108,
+        "media": {
+            "name":"Paranormasight",
+            "image": "/content/games/paranormasight.webp",
+            "idMedia": 4
+        },
+        "startDate": "00-03-2026"
+    },
+    {
+        "id": 109,
+        "media": {
+            "name":"Do androids dream of electric sheep?",
+            "image": "/content/book/blade_runner.webp",
+            "idMedia": 6
+        },
+        "startDate": "00-03-2026"
     }
 ]
