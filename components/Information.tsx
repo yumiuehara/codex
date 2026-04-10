@@ -1,5 +1,8 @@
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
+import YearSelector from "./YearSelector";
+import logList from "@/data/list.json";
+import { getYearFromCustomDate } from "@/helpers/dates";
 
 export type InformationProps = {
   movieCount: number;
@@ -33,17 +36,15 @@ export function InformationLine({ ...props }: InformationProps) {
   const t = useTranslations("components.Information");
 
   return (
-    <div className={clsx("w-full bg-(--color-pink) h-10 flex items-center justify-between", props.customClass)}>
-      <div className="font-bold text-2xl">
-        {props.year}
-      </div>
-        <div className="flex gap-2 items-center justify-center">
-            <div className="border border-(--color-dark-gray) px-2 bg-white/70 text-black">{t("games", { count: props.gameCount })}</div>
-            <div className="border border-(--color-dark-gray) px-2 bg-white/70 text-black">{t("manga", { count: props.mangaCount })}</div>
-            <div className="border border-(--color-dark-gray) px-2 bg-white/70 text-black">{t("anime", { count: props.animeCount })}</div>
-            <div className="border border-(--color-dark-gray) px-2 bg-white/70 text-black">{t("movies", { count: props.movieCount })}</div>
-            <div className="border border-(--color-dark-gray) px-2 bg-white/70 text-black">{t("series", { count: props.tvSeriesCount })}</div>
-            <div className="border border-(--color-dark-gray) px-2 bg-white/70 text-black">{t("books", { count: props.bookCount })}</div>
+    <div className={clsx("w-full bg-(--color-pink) min-h-10 lg:p-0 p-5 lg:flex-row flex-col gap-4 flex items-center justify-between", props.customClass)}>
+        <YearSelector className="flex" />
+        <div className="flex flex-wrap gap-2 items-center justify-center">
+            <div className="border border-(--color-dark-gray) px-0.5 lg:px-2 bg-white/70 text-black lg:text-sm text-xs">{t("games", { count: props.gameCount })}</div>
+            <div className="border border-(--color-dark-gray) px-0.5 lg:px-2 bg-white/70 text-black lg:text-sm text-xs">{t("manga", { count: props.mangaCount })}</div>
+            <div className="border border-(--color-dark-gray) px-0.5 lg:px-2 bg-white/70 text-black lg:text-sm text-xs">{t("anime", { count: props.animeCount })}</div>
+            <div className="border border-(--color-dark-gray) px-0.5 lg:px-2 bg-white/70 text-black lg:text-sm text-xs">{t("movies", { count: props.movieCount })}</div>
+            <div className="border border-(--color-dark-gray) px-0.5 lg:px-2 bg-white/70 text-black lg:text-sm text-xs">{t("series", { count: props.tvSeriesCount })}</div>
+            <div className="border border-(--color-dark-gray) px-0.5 lg:px-2 bg-white/70 text-black lg:text-sm text-xs">{t("books", { count: props.bookCount })}</div>
         </div>
         
     </div>

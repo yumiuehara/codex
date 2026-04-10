@@ -51,7 +51,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <div className="min-h-screen flex justify-center">
             <div className="w-7xl flex flex-col my-0 md:my-12 md:border border-0">
-              <Navbar years={validYears} />
+              <Navbar />
               <main className="mb-10">{children}</main>
             </div>
           </div>

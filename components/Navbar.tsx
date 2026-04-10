@@ -8,14 +8,12 @@ import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { Transition } from "@headlessui/react";
 import { useParams } from "next/navigation";
-import YearSelector from "./YearSelector";
 
 type NavProps = {
   className?: string;
-  years: Set<number>
 };
 
-export default function Navbar({ className, years }: NavProps) {
+export default function Navbar({ className }: NavProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const t = useTranslations("components.Navbar");
   const locale = useLocale();
@@ -46,7 +44,6 @@ export default function Navbar({ className, years }: NavProps) {
       </div>
 
       <div className="flex gap-x-2">
-        <YearSelector className="hidden md:flex" years={years} />
         <LanguageSelector className="hidden md:flex" />
       </div>
 
