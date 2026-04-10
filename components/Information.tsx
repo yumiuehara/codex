@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import YearSelector from "./YearSelector";
-import logList from "@/data/list.json";
-import { getYearFromCustomDate } from "@/helpers/dates";
 
 export type InformationProps = {
   movieCount: number;
@@ -36,7 +34,7 @@ export function InformationLine({ ...props }: InformationProps) {
   const t = useTranslations("components.Information");
 
   return (
-    <div className={clsx("w-full bg-(--color-pink) min-h-10 lg:p-0 p-5 lg:flex-row flex-col gap-4 flex items-center justify-between", props.customClass)}>
+    <div className={clsx("w-full bg-(--color-pink) min-h-10 px-8 sm:py-5 py-5 sm:py-2 lg:flex-row flex-col gap-4 flex items-center justify-between", props.customClass)}>
         <YearSelector className="flex" />
         <div className="flex flex-wrap gap-2 items-center justify-center">
             <div className="border border-(--color-dark-gray) px-0.5 lg:px-2 bg-white/70 text-black lg:text-sm text-xs">{t("games", { count: props.gameCount })}</div>
