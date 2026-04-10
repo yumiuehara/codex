@@ -1161,8 +1161,8 @@
             "image": "/content/games/organized.webp",
             "idMedia": 4
         },
-        "startDate": "00-03-2026",
-        "endDate": "00-03-2026"
+        "startDate": "22-03-2026",
+        "endDate": "22-03-2026"
     },
     {
         "id": 108,
@@ -1171,7 +1171,8 @@
             "image": "/content/games/paranormasight.webp",
             "idMedia": 4
         },
-        "startDate": "00-03-2026"
+        "startDate": "00-03-2026",
+        "endDate": "04-04-2026"
     },
     {
         "id": 109,
@@ -1180,6 +1181,7 @@
             "image": "/content/book/blade_runner.webp",
             "idMedia": 6
         },
-        "startDate": "00-03-2026"
+        "startDate": "00-03-2026",
+        "endDate": "08-04-2026"
     }
 ]
