@@ -19,7 +19,7 @@ export default function Home() {
     if (log.endDate) end = String(getYearFromCustomDate(log.endDate));
 
     return start === params.year || end === params.year;
-  });
+  }).sort((a, b) => b.id - a.id);
 
   const {
     [MediaTypeEnum.ANIME]: animeList = [],
@@ -44,66 +44,13 @@ export default function Home() {
         mangaCount={mangaList.length}
         movieCount={movieList.length}
         tvSeriesCount={seriesList.length}
+        customClass="px-8 sm:px-10"
       />
 
-      {animeList.length > 0 &&
+      {filteredLogs.length > 0 &&
         <ListSection
-          customClass="mx-10 my-5"
-          title={t("misc.anime")}
-          data={animeList}
-          seeAllUrl={`${params.year}/anime`}
-          sliceItems
-        />
-      }
-
-
-      {mangaList.length > 0 && 
-        <ListSection
-          customClass="mx-10 my-5"
-          title={t("misc.manga")}
-          data={mangaList}
-          seeAllUrl={`${params.year}/manga`}
-          sliceItems
-        />
-      }
-
-      {movieList.length > 0 &&
-        <ListSection
-          customClass="mx-10 my-5"
-          title={t("misc.movies")}
-          data={movieList}
-          seeAllUrl={`${params.year}/movies`}
-          sliceItems
-        />
-      }
-
-      {gameList.length > 0 &&
-        <ListSection
-          customClass="mx-10 my-5"
-          title={t("misc.games")}
-          data={gameList}
-          seeAllUrl={`${params.year}/games`}
-          sliceItems
-        />
-      }
-
-      {seriesList.length > 0 &&
-        <ListSection
-          customClass="mx-10 my-5"
-          title={t("misc.series")}
-          data={seriesList}
-          seeAllUrl={`${params.year}/series`}
-          sliceItems
-        />
-      }
-
-      {bookList.length > 0 &&
-        <ListSection
-          customClass="mx-10 my-5"
-          title={t("misc.books")}
-          data={bookList}
-          seeAllUrl={`${params.year}/books`}
-          sliceItems
+          customClass="mx-8 sm:mx-10 my-5"
+          data={filteredLogs}
         />
       }
     </div>

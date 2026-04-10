@@ -1,25 +1,23 @@
 import Image from "next/image";
-import Information from "./Information";
-import type { InformationProps } from "./Information";
+import { InformationLine, type InformationProps } from "./Information";
 
 export default function Hero({year, ...props}: {year: string} & InformationProps) {
   return (
-    <section className="flex items-center justify-center border-b relative">
-      <Image
-        src={`/hero-${year}.webp`}
-        width={0}
-        height={0}
-        alt=""
-        sizes="100vw"
-        className="w-[100%] h-[350px] object-cover"
-      />
+    <div>
+      <section className="flex items-center justify-center w-full h-[150px] bg-(--color-pink) relative">
+        <Image
+          src={`/hero-${year}.webp`}
+          width={0}
+          height={0}
+          alt=""
+          sizes="100vw"
+          className="w-[100%] h-[150px] object-cover mix-blend-screen"
+        />
 
-      <div className="absolute font-bold text-9xl leading flex flex-col items-center justify-center w-[100%] h-[100%] backdrop-contrast-50">
-        <span className="drop-shadow-lg bg-linear-to-bl from-(--color-pink) via-(--color-red) to-(--color-pink) bg-clip-text text-transparent">
-          {year}
-        </span>
-        <Information {...props}  />
-      </div>
-    </section>
+        <div className="absolute font-bold text-9xl leading flex flex-col items-center justify-center w-[100%] h-[100%] bg-(--color-pink)/50">
+        </div>
+      </section>
+      <InformationLine {...props} year={year} />
+    </div>
   );
 }
