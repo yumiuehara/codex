@@ -27,6 +27,13 @@ type Description = {
   "pt-br"?: string;
 };
 
+export type Favorite = {
+  img: string,
+  name: string,
+  source: string,
+  favoriteType: string
+}
+
 export enum MediaTypeEnum {
   ANIME = 1,
   MANGA,
@@ -34,4 +41,8 @@ export enum MediaTypeEnum {
   GAME,
   TV_SERIES,
   BOOK,
+}
+
+export enum FavoriteTypeEnum {
+  CHARACTER = 'CHARACTER'
 }

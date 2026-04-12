@@ -8,7 +8,8 @@
         "games": "jogos",
         "books": "livros",
         "series": "séries",
-        "movies": "filmes"
+        "movies": "filmes",
+        "favorite": "favoritos"
       }
     },
     "Footer": {
@@ -56,6 +57,10 @@
     "NotFoundPage": {
       "message": "Página não encontrada!",
       "notFoundImageAlt": "Namazu confuso com uma interrogação e o texto em inglês HUH"
+    },
+    "FavoritePage": {
+      "favorites": "favoritos",
+      "CHARACTER": "Personagens"
     }
   }
 }
