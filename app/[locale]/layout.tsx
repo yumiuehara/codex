@@ -6,8 +6,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import logList from "@/data/list.json";
-import { getYearFromCustomDate } from "@/helpers/dates";
 
 const inconsolata = Inconsolata({
   variable: "--font-inconsolata",
@@ -18,8 +16,6 @@ export const metadata: Metadata = {
   title: "codex",
   description: "i enjoy making lists",
 };
-
-const validYears = new Set<number>(logList.map(item => getYearFromCustomDate(item.endDate || item.startDate)));
 
 export default async function RootLayout({
   children,
