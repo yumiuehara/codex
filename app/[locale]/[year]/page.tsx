@@ -5,11 +5,9 @@ import ListSection from "@/components/ListSection";
 import logList from "@/data/list.json";
 import { getYearFromCustomDate } from "@/helpers/dates";
 import { MediaTypeEnum } from "@/helpers/types";
-import { useTranslations } from "next-intl";
 import { useParams } from 'next/navigation'
 
 export default function Home() {
-  const t = useTranslations("pages");
   const params = useParams<{ locale: string; year: string }>()
 
   const filteredLogs = logList.filter((log) => {
