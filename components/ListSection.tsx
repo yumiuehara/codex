@@ -44,7 +44,7 @@ export default function ListSection({
         )}
       </div>
 
-      <div className="flex flex-wrap gap-x-1 gap-y-2 justify-between">
+      <div className="flex flex-wrap gap-x-1 gap-y-6 justify-between">
         {list.length > 0 &&
           list.map((log) => <Card cardData={log} key={log.id} />)}
 

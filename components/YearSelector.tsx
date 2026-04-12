@@ -1,5 +1,6 @@
 "use client";
 
+import { getYearFromCustomDate } from "@/helpers/dates";
 import {
   Listbox,
   ListboxButton,
@@ -10,13 +11,14 @@ import clsx from "clsx";
 import { permanentRedirect, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
+import logList from "@/data/list.json";
 
 type YearSelectorProps = {
   className?: string;
-  years: Set<number>
 };
 
-export default function YearSelector({ className, years }: YearSelectorProps) {
+export default function YearSelector({ className }: YearSelectorProps) {
+  const years = new Set<number>(logList.map(item => getYearFromCustomDate(item.endDate || item.startDate)));
   const params = useParams<{ locale: string; year: string }>()
 
   const yearsList = Array.from(years)
@@ -49,13 +51,13 @@ export default function YearSelector({ className, years }: YearSelectorProps) {
       <Listbox value={selected} onChange={setYear}>
         <ListboxButton
           className={clsx(
-            "relative block w-full bg-(--color-dark-gray) border-white border border-l py-1.5 pr-8 pl-3 text-left text-sm/6 text-white",
+            "relative block w-full border-white border border-l pr-8 pl-3 text-left text-sm/6 text-white font-bold",
             "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-black/25"
           )}
         >
           {selected}
           <BiChevronDown
-            className="group pointer-events-none absolute top-2.5 right-2.5 size-4 fill-white/60"
+            className="group pointer-events-none absolute top-1 right-2.5 size-4 fill-white"
             aria-hidden="true"
           />
         </ListboxButton>
@@ -63,7 +65,7 @@ export default function YearSelector({ className, years }: YearSelectorProps) {
           anchor="bottom"
           transition
           className={clsx(
-            "w-(--button-width) border p-1 focus:outline-none bg-(--color-dark-gray)",
+            "w-(--button-width) border focus:outline-none bg-(--color-dark-gray)",
             "transition duration-100 ease-in"
           )}
         >
@@ -73,7 +75,7 @@ export default function YearSelector({ className, years }: YearSelectorProps) {
               <ListboxOption
                 key={index}
                 value={it}
-                className="group flex cursor-pointer items-center gap-2 rounded-lg px-3 py-1 select-none "
+                className="group flex cursor-pointer items-center gap-2 rounded-lg px-3 select-none"
               >
                 <div className="text-sm/6 text-white">{it}</div>
               </ListboxOption>
