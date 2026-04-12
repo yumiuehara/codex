@@ -1,5 +1,11 @@
 [
     {
+        "name": "Namazu",
+        "source": "Final Fantasy XIV",
+        "img": "/content/favorite/namazu.webp",
+        "favoriteType": "CHARACTER"
+    },
+    {
         "name": "Don Valentino",
         "source": "Cuticle Tantei Inaba",
         "img": "/content/favorite/don_valentino.webp",
