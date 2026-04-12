@@ -8,10 +8,14 @@ import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { Transition } from "@headlessui/react";
 import { useParams } from "next/navigation";
+import logList from "@/data/list.json";
+import { getYearFromCustomDate } from "@/helpers/dates";
 
 type NavProps = {
   className?: string;
 };
+
+const validYears = new Set<number>(logList.map(item => getYearFromCustomDate(item.endDate || item.startDate)));
 
 export default function Navbar({ className }: NavProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -22,6 +26,8 @@ export default function Navbar({ className }: NavProps) {
   const currentYear = params.year || new Date().getFullYear();
 
   const buildUrl = (key?: string, index?: number) => {
+    if (!validYears.has(Number(params.year))) return `/${locale}/${new Date().getFullYear()}`
+
     if (key && index !== undefined) {
       if (index <= links.length - 2) {
         return `/${locale}/${currentYear}/${key}`
