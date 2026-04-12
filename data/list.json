@@ -1183,5 +1183,16 @@
         },
         "startDate": "00-03-2026",
         "endDate": "08-04-2026"
+    },
+    {
+        "id": 110,
+        "media": {
+            "name":"Project Hail Mary",
+            "image": "/content/movie/hail_mary.webp",
+            "idMedia": 3
+        },
+        "startDate": "10-04-2026",
+        "endDate": "10-04-2026",
+        "like": true
     }
 ]
