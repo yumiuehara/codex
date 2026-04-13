@@ -29,11 +29,11 @@ button {
   cursor: pointer;
 }
 
-.card__title {  /* Element */
+.card__title {  
   @apply w-[140px] md:w-[150px];
 }
 
-.card__image {  /* Element */
+.card__image {  
   @apply w-[140px] md:w-[150px] aspect-(--card-aspect-ratio);
 }
 

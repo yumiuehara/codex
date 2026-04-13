@@ -41,7 +41,7 @@ export default function Navbar({ className }: NavProps) {
 
   return (
     <div
-      className={`${className} flex items-center justify-between border-b py-2 px-5 relative`}
+      className={`${className} flex items-center justify-between border-b py-2 px-8 sm:px-10 relative`}
     >
       <Link
         href={buildUrl()}
