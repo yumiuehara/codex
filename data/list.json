@@ -1101,7 +1101,7 @@
     {
         "id": 102,
         "media": {
-            "name":"Casas estranhas",
+            "name":"Strange Houses",
             "image": "/content/book/casas_estranhas.webp",
             "idMedia": 6
         },
@@ -1115,7 +1115,7 @@
     {
         "id": 103,
         "media": {
-            "name":"Casas estranhas 2",
+            "name":"Strange Houses 2",
             "image": "/content/book/casas_estranhas_2.webp",
             "idMedia": 6
         },
@@ -1128,7 +1128,7 @@
     {
         "id": 104,
         "media": {
-            "name":"Imagens Estranhas",
+            "name":"Strange Pictures",
             "image": "/content/book/ie.webp",
             "idMedia": 6
         },
@@ -1193,6 +1193,17 @@
         },
         "startDate": "10-04-2026",
         "endDate": "10-04-2026",
+        "like": true
+    },
+    {
+        "id": 111,
+        "media": {
+            "name":"Duck Detective: The Secret Salami",
+            "image": "/content/games/duck_salami.webp",
+            "idMedia": 4
+        },
+        "startDate": "12-04-2026",
+        "endDate": "12-04-2026",
         "like": true
     }
 ]
