@@ -42,13 +42,6 @@ export function InformationLine({ ...props }: InformationProps) {
   return (
     <div className={clsx("w-full relative bg-pink min-h-18 px-8 lg:py-5 py-2 lg:flex-row flex-col gap-4 flex items-center justify-between border-y", props.customClass)}>
       <div className="gap-4 items-center flex -mt-17 lg:-mt-20">
-        <Image
-          src="/reading.png"
-          alt="profile picture"
-          width={120}
-          height={120}
-          className="border rounded-full border-white"
-        />
         <div className="flex flex-col gap-y-2 mt-7">
           <div className="flex gap-2">
             <Link href="https://steamcommunity.com/id/pasteldepeido/" target="_blank">
