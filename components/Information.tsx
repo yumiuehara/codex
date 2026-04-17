@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import YearSelector from "./YearSelector";
-import Image from "next/image";
 import { FaSquareLetterboxd } from "react-icons/fa6";
 import { SiMyanimelist } from "react-icons/si";
 import { TbDeviceTvFilled } from "react-icons/tb";
