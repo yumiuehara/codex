@@ -1205,5 +1205,32 @@
         "startDate": "12-04-2026",
         "endDate": "12-04-2026",
         "like": true
+    },
+    {
+        "id": 112,
+        "media": {
+            "name":"Loopers",
+            "image": "/content/games/loopers.webp",
+            "idMedia": 4
+        },
+        "startDate": "17-04-2026",
+        "endDate": "17-04-2026",
+        "like": false,
+        "hate": true,
+        "score": 1,
+        "description": {
+            "en-us": "",
+            "pt-br": "Impressionante como é ruim."
+        }
+    },
+    {
+        "id": 113,
+        "media": {
+            "name":"Whisper of the House",
+            "image": "/content/games/whisper.webp",
+            "idMedia": 4
+        },
+        "startDate": "19-04-2026",
+        "endDate": "21-04-2026"
     }
 ]
