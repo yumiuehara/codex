@@ -1240,6 +1240,26 @@
             "image": "/content/games/fata_morgana.webp",
             "idMedia": 4
         },
-        "startDate": "23-04-2026"
+        "startDate": "23-04-2026",
+        "endDate": "09-05-2026"
+    },
+    {
+        "id": 115,
+        "media": {
+            "name":"Homicipher [DEMO]",
+            "image": "/content/games/homicipher.webp",
+            "idMedia": 4
+        },
+        "startDate": "30-04-2026",
+        "endDate": "30-04-2026"
+    },
+    {
+        "id": 116,
+        "media": {
+            "name":"Persona 3 Reload",
+            "image": "/content/games/p3r.webp",
+            "idMedia": 4
+        },
+        "startDate": "10-05-2026"
     }
 ]
