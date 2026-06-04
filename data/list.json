@@ -1260,6 +1260,66 @@
             "image": "/content/games/p3r.webp",
             "idMedia": 4
         },
-        "startDate": "10-05-2026"
+        "startDate": "10-05-2026",
+        "endDate": "31-05-2026"
+    },
+    {
+        "id": 117,
+        "media": {
+            "name":"The Naked Gun: From the Files of Police Squad!",
+            "image": "/content/movie/naked_gun.webp",
+            "idMedia": 3
+        },
+        "startDate": "23-05-2026",
+        "endDate": "23-05-2026"
+    },
+    {
+        "id": 118,
+        "media": {
+            "name":"A Grand Day Out",
+            "image": "/content/movie/grand_day_out.webp",
+            "idMedia": 3
+        },
+        "startDate": "23-05-2026",
+        "endDate": "23-05-2026"
+    },
+    {
+        "id": 119,
+        "media": {
+            "name":"A Close Shave",
+            "image": "/content/movie/close_shave.webp",
+            "idMedia": 3
+        },
+        "startDate": "23-05-2026",
+        "endDate": "23-05-2026"
+    },
+    {
+        "id": 120,
+        "media": {
+            "name":"Wallace & Gromit: The Curse of the Were-Rabbit",
+            "image": "/content/movie/were_rabbit.webp",
+            "idMedia": 3
+        },
+        "startDate": "23-05-2026",
+        "endDate": "23-05-2026"
+    },
+    {
+        "id": 121,
+        "media": {
+            "name":"28 Years Later: The Bone Temple",
+            "image": "/content/movie/bone_temple.webp",
+            "idMedia": 3
+        },
+        "startDate": "26-05-2026",
+        "endDate": "26-05-2026"
+    },
+    {
+        "id": 122,
+        "media": {
+            "name":"Slay The Princess",
+            "image": "/content/games/slay_the_princess.webp",
+            "idMedia": 3
+        },
+        "startDate": "03-06-2026"
     }
 ]
