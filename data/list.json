@@ -1318,8 +1318,18 @@
         "media": {
             "name":"Slay The Princess",
             "image": "/content/games/slay_the_princess.webp",
-            "idMedia": 3
+            "idMedia": 4
         },
-        "startDate": "03-06-2026"
+        "startDate": "03-06-2026",
+        "endDate": "04-06-2026"
+    },
+    {
+        "id": 123,
+        "media": {
+            "name":"428: Shibuya Scramble",
+            "image": "/content/games/428.webp",
+            "idMedia": 4
+        },
+        "startDate": "04-06-2026"
     }
 ]
