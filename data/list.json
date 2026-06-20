@@ -1331,5 +1331,55 @@
             "idMedia": 4
         },
         "startDate": "04-06-2026"
+    },
+    {
+        "id": 124,
+        "media": {
+            "name":"Arrival",
+            "image": "/content/movie/arrival.webp",
+            "idMedia": 3
+        },
+        "startDate": "06-06-2026",
+        "endDate": "06-06-2026"
+    },
+    {
+        "id": 125,
+        "media": {
+            "name":"Yami Shibai 15",
+            "image": "/content/anime/yami_shibai_15.webp",
+            "idMedia": 1
+        },
+        "startDate": "06-06-2026",
+        "endDate": "06-06-2026"
+    },
+    {
+        "id": 126,
+        "media": {
+            "name":"Yami Shibai 16",
+            "image": "/content/anime/yami_shibai_16.webp",
+            "idMedia": 1
+        },
+        "startDate": "06-06-2026",
+        "endDate": "06-06-2026"
+    },
+    {
+        "id": 127,
+        "media": {
+            "name":"Fantastic Mr. Fox",
+            "image": "/content/movie/mrfox.webp",
+            "idMedia": 3
+        },
+        "startDate": "07-06-2026",
+        "endDate": "07-06-2026"
+    },
+    {
+        "id": 128,
+        "media": {
+            "name":"The Lighthouse",
+            "image": "/content/movie/lighthouse.webp",
+            "idMedia": 3
+        },
+        "startDate": "07-06-2026",
+        "endDate": "07-06-2026"
     }
 ]
