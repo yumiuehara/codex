@@ -1381,5 +1381,45 @@
         },
         "startDate": "07-06-2026",
         "endDate": "07-06-2026"
+    },
+    {
+        "id": 129,
+        "media": {
+            "name":"Shutter Island",
+            "image": "/content/movie/shutter.webp",
+            "idMedia": 3
+        },
+        "startDate": "20-06-2026",
+        "endDate": "20-06-2026"
+    },
+    {
+        "id": 130,
+        "media": {
+            "name":"Forgotten",
+            "image": "/content/movie/forgotten.webp",
+            "idMedia": 3
+        },
+        "startDate": "20-06-2026",
+        "endDate": "20-06-2026"
+    },
+    {
+        "id": 131,
+        "media": {
+            "name":"Decision to leave",
+            "image": "/content/movie/decision.webp",
+            "idMedia": 3
+        },
+        "startDate": "21-06-2026",
+        "endDate": "21-06-2026"
+    },
+    {
+        "id": 132,
+        "media": {
+            "name":"Alien",
+            "image": "/content/movie/alien.webp",
+            "idMedia": 3
+        },
+        "startDate": "21-06-2026",
+        "endDate": "21-06-2026"
     }
 ]
