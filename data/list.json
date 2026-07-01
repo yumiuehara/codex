@@ -1421,5 +1421,43 @@
         },
         "startDate": "21-06-2026",
         "endDate": "21-06-2026"
+    },
+    {
+        "id": 133,
+        "media": {
+            "name":"Widow's Bay S1",
+            "image": "/content/series/widows.webp",
+            "idMedia": 5
+        },
+        "startDate": "21-06-2026",
+        "endDate": "30-06-2026"
+    },
+    {
+        "id": 134,
+        "media": {
+            "name":"No Other Choice",
+            "image": "/content/movie/choice.webp",
+            "idMedia": 3
+        },
+        "startDate": "26-06-2026",
+        "endDate": "26-06-2026"
+    },
+    {
+        "id": 135,
+        "media": {
+            "name":"All-in-one sports VR",
+            "image": "/content/games/sports.webp",
+            "idMedia": 4
+        },
+        "startDate": "26-06-2026"
+    },
+    {
+        "id": 136,
+        "media": {
+            "name":"Half-Life",
+            "image": "/content/games/hl.webp",
+            "idMedia": 4
+        },
+        "startDate": "28-06-2026"
     }
 ]
