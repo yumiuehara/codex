@@ -2,59 +2,56 @@
 
 import Hero from "@/components/Hero";
 import ListSection from "@/components/ListSection";
-import logList from "@/data/list.json";
-import { getYearFromCustomDate } from "@/helpers/dates";
-import { MediaTypeEnum } from "@/helpers/types";
+import { getLogs, getYears } from "@/helpers/queries";
+import { Log, Years } from "@/helpers/types";
+import { useQuery } from "@tanstack/react-query";
 import { notFound, useParams } from 'next/navigation'
-
-const validYears = new Set<number>(logList.map(item => getYearFromCustomDate(item.endDate || item.startDate)));
+import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Home() {
   const params = useParams<{ locale: string; year: string }>()
 
-  if (!/^\d{4}$/.test(params.year) || !validYears.has(Number(params.year))) {
+  const { data: validYears, isPending, isLoading: isLoadingYears, error: yearErrors } = useQuery<Years[]>({
+    queryKey: ['years', params.year, params.locale],
+    queryFn: getYears,
+  });
+  
+  const { data, isLoading, error } = useQuery<Log[]>({
+    queryKey: ['logs', params.year],
+    queryFn: () => getLogs(params.year),
+    enabled: !!validYears
+  });
+
+  if (isPending || isLoadingYears) return <div className="w-full flex items-center justify-center p-10"><AiOutlineLoading className="animate-spin" /></div>
+
+  if (!validYears || yearErrors) {
     notFound();
   }
 
-  const filteredLogs = logList.filter((log) => {
-    const start = String(getYearFromCustomDate(log.startDate));
+  const isValidYear =
+    /^\d{4}$/.test(params.year) &&
+    validYears.some(it => it.year == params.year);
 
-    let end = start
-    if (log.endDate) end = String(getYearFromCustomDate(log.endDate));
-
-    return start === params.year || end === params.year;
-  }).sort((a, b) => b.id - a.id);
-
-  const {
-    [MediaTypeEnum.ANIME]: animeList = [],
-    [MediaTypeEnum.MANGA]: mangaList = [],
-    [MediaTypeEnum.MOVIE]: movieList = [],
-    [MediaTypeEnum.GAME]: gameList = [],
-    [MediaTypeEnum.TV_SERIES]: seriesList = [],
-    [MediaTypeEnum.BOOK]: bookList = [],
-  } = filteredLogs.reduce((acc, log) => {
-    const id = log.media.idMedia as MediaTypeEnum;
-    acc[id] = [...(acc[id] ?? []), log];
-    return acc;
-  }, {} as Record<MediaTypeEnum, typeof logList>);
+  if (!isValidYear) {
+    notFound();
+  }
 
   return (
     <div className="flex flex-col gap-y-5">
       <Hero
         year={params.year}
-        animeCount={animeList.length}
-        bookCount={bookList.length}
-        gameCount={gameList.length}
-        mangaCount={mangaList.length}
-        movieCount={movieList.length}
-        tvSeriesCount={seriesList.length}
-        customClass="px-8 sm:px-10"
       />
 
-      {filteredLogs.length > 0 &&
+      {isLoading && <div className="w-full flex items-center justify-center p-10">
+        <AiOutlineLoading className="animate-spin" />
+      </div>}
+      
+      {error && <p>Erro: {error.message}</p>}
+
+      {data && data.length > 0 &&
         <ListSection
           customClass="mx-8 sm:mx-10 my-5"
-          data={filteredLogs}
+          data={data}
         />
       }
     </div>

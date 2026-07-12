@@ -1,6 +1,5 @@
 "use client";
 
-import { getYearFromCustomDate } from "@/helpers/dates";
 import {
   Listbox,
   ListboxButton,
@@ -9,43 +8,47 @@ import {
 } from "@headlessui/react";
 import clsx from "clsx";
 import { permanentRedirect, useParams, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
-import logList from "@/data/list.json";
+import { useQuery } from "@tanstack/react-query";
+import { getYears } from "@/helpers/queries";
+import { Years } from "@/helpers/types";
 
 type YearSelectorProps = {
   className?: string;
 };
 
 export default function YearSelector({ className }: YearSelectorProps) {
-  const years = new Set<number>(logList.map(item => getYearFromCustomDate(item.endDate || item.startDate)));
-  const params = useParams<{ locale: string; year: string }>()
-  const pathname = usePathname()
+  const { data: validYears } = useQuery<Years[]>({
+    queryKey: ['years'],
+    queryFn: getYears,
+  });
 
-  const yearsList = Array.from(years)
+  const params = useParams<{ locale: string; year: string }>();
+  const pathname = usePathname();
+  const [selected, setSelected] = useState<string>(new Date().getFullYear().toString());
 
-  const [selected, setSelected] = useState<number>(
-      () =>
-        yearsList.find((year) => Number(params.year) === year) ||
-        yearsList[0]
-    );
+  const yearsList = useMemo(
+    () => (validYears ?? []).map(it => it.year),
+    [validYears]
+  );
 
-  const setYear = (value: number) => {
+  const setYear = (value: string) => {
     const pathnameSplit = pathname.split("/");
-    const currentYearIndex = pathnameSplit.findIndex(it => it == params.year)
+    const currentYearIndex = pathnameSplit.findIndex(it => it === params.year);
 
     if (currentYearIndex >= 0) {
-      pathnameSplit[currentYearIndex] = String(value)
-      permanentRedirect(pathnameSplit.join("/"))
+      pathnameSplit[currentYearIndex] = String(value);
+      permanentRedirect(pathnameSplit.join("/"));
     } else {
-      permanentRedirect("/")
+      permanentRedirect("/");
     }
   };
 
   useEffect(() => {
+    if (yearsList.length === 0) return;
     const newSelected =
-      yearsList.find((year) => Number(params.year) === year) ||
-      yearsList[0];
+      yearsList.find(year => params.year === year) ?? yearsList[0];
     setSelected(newSelected);
   }, [params.year, yearsList]);
 
@@ -68,7 +71,7 @@ export default function YearSelector({ className }: YearSelectorProps) {
           anchor="bottom"
           transition
           className={clsx(
-            "w-(--button-width) border focus:outline-none bg-(--color-dark-gray)",
+            "w-(--button-width) border focus:outline-none bg-dark-gray",
             "transition duration-100 ease-in"
           )}
         >

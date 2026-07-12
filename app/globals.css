@@ -10,6 +10,22 @@
   --smooth-dark-gray-gradient: linear-gradient(90deg,rgba(28, 26, 26, 1) 54%, rgba(28, 26, 26, 0.9) 64%, rgba(28, 26, 26, 0.81) 71%, rgba(255, 255, 255, 0) 100%);
 }
 
+@keyframes slice-1 {
+  0%, 100%   { clip-path: inset(10% 0 82% 0); transform: translateX(0); }
+  20%        { clip-path: inset(12% 0 80% 0); transform: translateX(-10px); }
+  40%        { clip-path: inset(10% 0 82% 0); transform: translateX(0); }
+}
+@keyframes slice-2 {
+  0%, 100%   { clip-path: inset(45% 0 44% 0); transform: translateX(0); }
+  30%        { clip-path: inset(43% 0 46% 0); transform: translateX(8px); }
+  60%        { clip-path: inset(45% 0 44% 0); transform: translateX(0); }
+}
+@keyframes slice-3 {
+  0%, 100%   { clip-path: inset(72% 0 14% 0); transform: translateX(0); }
+  50%        { clip-path: inset(70% 0 16% 0); transform: translateX(-6px); }
+  70%        { clip-path: inset(72% 0 14% 0); transform: translateX(0); }
+}
+
 :root {
   --background: #1d1d1d;
   --foreground: #ededed;
@@ -37,3 +53,6 @@ button {
   @apply w-[140px] md:w-[150px] aspect-(--card-aspect-ratio);
 }
 
+.media__image {
+  @apply w-[250px] aspect-(--card-aspect-ratio);
+}

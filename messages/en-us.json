@@ -43,6 +43,18 @@
           "name": "Portuguese"
         }
       ]
+    },
+    "MediaInformation": {
+      "ANIME": "anime",
+      "MANGA": "manga",
+      "MOVIE": "movie",
+      "GAME": "game",
+      "TV_SERIES": "series",
+      "BOOK": "book",
+      "like": "liked",
+      "hate": "hated",
+      "suffering": "eternal suffering",
+      "replay": "again"
     }
   },
   "pages": {
