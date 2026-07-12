@@ -20,8 +20,8 @@ export default function GamePage() {
 
   return (
     <FullListLayout title={t("misc.games")}>
-      {isLoading && <AiOutlineLoading className="animate-spin" />}
-
+      {isLoading && <div className="w-full flex items-center justify-center p-10"><AiOutlineLoading className="animate-spin" /></div>}
+      
       {data && <ListSection data={data} customClass="mx-10 my-5" />}
     </FullListLayout>
   );
