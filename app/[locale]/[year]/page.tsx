@@ -22,7 +22,7 @@ export default function Home() {
     enabled: !!validYears
   });
 
-  if (isPending || isLoadingYears) return <AiOutlineLoading className="animate-spin" />
+  if (isPending || isLoadingYears) return <div className="w-full flex items-center justify-center p-10"><AiOutlineLoading className="animate-spin" /></div>
 
   if (!validYears || yearErrors) {
     notFound();
