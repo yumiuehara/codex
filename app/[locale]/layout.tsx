@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Providers from "../providers";
 
 const inconsolata = Inconsolata({
   variable: "--font-inconsolata",
@@ -35,15 +36,17 @@ export default async function RootLayout({
       <body
         className={`${inconsolata.variable} antialiased font-(family-name:--font-inconsolata)`}
       >
-        <NextIntlClientProvider>
-          <div className="min-h-screen flex justify-center">
-            <div className="w-7xl flex flex-col my-0 md:my-12 md:border border-0">
-              <Navbar />
-              <main className="mb-10">{children}</main>
+        <Providers>
+          <NextIntlClientProvider>
+            <div className="min-h-screen flex justify-center">
+              <div className="w-7xl flex flex-col my-0 md:my-12 md:border border-0">
+                <Navbar />
+                <main>{children}</main>
+              </div>
             </div>
-          </div>
-          <Footer />
-        </NextIntlClientProvider>
+            <Footer />
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );

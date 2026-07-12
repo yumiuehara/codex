@@ -2,28 +2,27 @@
 
 import FullListLayout from "@/components/FullListLayout";
 import ListSection from "@/components/ListSection";
-import logList from "@/data/list.json";
-import { getYearFromCustomDate } from "@/helpers/dates";
-import { MediaTypeEnum } from "@/helpers/types";
+import { getLogs } from "@/helpers/queries";
+import { Log, MediaTypeEnum } from "@/helpers/types";
+import { useQuery } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import { AiOutlineLoading } from "react-icons/ai";
 
 export default function BookPage() {
   const t = useTranslations("pages");
   const params = useParams<{ locale: string; year: string }>()
 
-  const bookList = logList.filter((log) => {
-    const start = String(getYearFromCustomDate(log.startDate));
-
-    let end = start
-    if (log.endDate) end = String(getYearFromCustomDate(log.endDate));
-
-    return (start === params.year || end === params.year) && log.media.idMedia === MediaTypeEnum.BOOK;
+  const { data, isLoading } = useQuery<Log[]>({
+      queryKey: ['book', params.year],
+      queryFn: () => getLogs(params.year, MediaTypeEnum.BOOK),
   });
 
   return (
     <FullListLayout title={t("misc.books")}>
-      <ListSection data={bookList} customClass="mx-10 my-5" />
+      {isLoading && <AiOutlineLoading className="animate-spin" />}
+
+      {data && <ListSection data={data} customClass="mx-10 my-5" />}
     </FullListLayout>
   );
 }
