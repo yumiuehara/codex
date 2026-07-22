@@ -1,8 +1,12 @@
 export async function getLogs(year?: string, type?: number) {
-  let path = 'https://codex-api.yumi.dev.br/api/logs?year=' + year
+  let path = 'https://codex-api.yumi.dev.br/api/logs'
+
+  if (year) {
+    path += '?year=' + year
+  }
 
   if (type) {
-    path += '&type=' + type
+    path += (year ? '&type=' : '?type=') + type
   }
 
   const res = await fetch(path);
