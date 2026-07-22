@@ -7,8 +7,8 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import clsx from "clsx";
-import { permanentRedirect, useParams, usePathname } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import { useQuery } from "@tanstack/react-query";
 import { getYears } from "@/helpers/queries";
@@ -24,33 +24,32 @@ export default function YearSelector({ className }: YearSelectorProps) {
     queryFn: getYears,
   });
 
-  const params = useParams<{ locale: string; year: string }>();
-  const pathname = usePathname();
-  const [selected, setSelected] = useState<string>(new Date().getFullYear().toString());
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const pathname = usePathname()
+  const [selected, setSelected] = useState<string>(searchParams.get("year") ?? new Date().getFullYear().toString());
 
   const yearsList = useMemo(
     () => (validYears ?? []).map(it => it.year),
     [validYears]
   );
 
-  const setYear = (value: string) => {
-    const pathnameSplit = pathname.split("/");
-    const currentYearIndex = pathnameSplit.findIndex(it => it === params.year);
-
-    if (currentYearIndex >= 0) {
-      pathnameSplit[currentYearIndex] = String(value);
-      permanentRedirect(pathnameSplit.join("/"));
-    } else {
-      permanentRedirect("/");
-    }
-  };
+  const setYear = useCallback(
+    (value: string) => {
+      const params = new URLSearchParams(searchParams.toString())
+      params.set("year", value)
+      router.push(`${pathname}?${params.toString()}`)
+    },
+    [searchParams, pathname, router]
+  )
 
   useEffect(() => {
     if (yearsList.length === 0) return;
-    const newSelected =
-      yearsList.find(year => params.year === year) ?? yearsList[0];
+    const params = new URLSearchParams(searchParams.toString())
+    const yearParam = params.get("year")
+    const newSelected = yearsList.find(year => yearParam === year) ?? new Date().getFullYear().toString();
     setSelected(newSelected);
-  }, [params.year, yearsList]);
+  }, [searchParams, yearsList]);
 
   return (
     <div className={`${className} w-36`}>

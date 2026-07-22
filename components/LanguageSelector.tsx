@@ -24,7 +24,7 @@ type LanguageSelectorProps = {
 export default function LanguageSelector({ className }: LanguageSelectorProps) {
   const t = useTranslations("components.LanguageSelector");
   const langList: Lang[] = t.raw("languages");
-  const params = useParams<{ locale: string; year: string, slug: string }>()
+  const params = useParams<{ locale: string; slug: string }>()
   const pathname = usePathname()
   const currentLanguage = useLocale();
 

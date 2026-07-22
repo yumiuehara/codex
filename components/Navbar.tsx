@@ -7,7 +7,6 @@ import LanguageSelector from "./LanguageSelector";
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { Transition } from "@headlessui/react";
-import { useParams } from "next/navigation";
 
 type NavProps = {
   className?: string;
@@ -17,20 +16,10 @@ export default function Navbar({ className }: NavProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const t = useTranslations("components.Navbar");
   const locale = useLocale();
-  const params = useParams<{ locale: string; year: string }>()
   const links: [string, string][] = Object.entries(t.raw("links"));
-  const currentYear = params.year || new Date().getFullYear();
 
-  const buildUrl = (key?: string, index?: number) => {
-    if (key && index !== undefined) {
-      if (index <= links.length - 2) {
-        return `/${locale}/${currentYear}/${key}`
-      } else {
-        return `/${locale}/${key}`
-      }
-    }
-
-    return params.year ? `/${locale}/${params.year}` : `/${locale}/`
+  const buildUrl = (key?: string) => {
+    return `/${locale}/${key ?? ''}`
   }
 
   return (
@@ -47,7 +36,7 @@ export default function Navbar({ className }: NavProps) {
       <div className="hidden md:flex items-center justify-center text-sm">
         {links.map(([key, val]: [string, string], index: number) => (
           <div key={key} className="flex">
-            <Link href={buildUrl(key, index)} className="px-2">
+            <Link href={buildUrl(key)} className="px-2">
               {val}
             </Link>
 
@@ -72,9 +61,9 @@ export default function Navbar({ className }: NavProps) {
               onClick={() => setIsOpen(false)}
             />
             <div className="flex flex-col items-center justify-center h-full gap-y-10">
-              {links.map(([key, val]: [string, string], index: number) => (
+              {links.map(([key, val]: [string, string]) => (
                 <Link
-                  href={buildUrl(key, index)}
+                  href={buildUrl(key)}
                   key={key}
                   className="px-2"
                   onClick={() => setIsOpen(false)}
