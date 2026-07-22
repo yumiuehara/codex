@@ -27,7 +27,7 @@ export default function YearSelector({ className }: YearSelectorProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
   const pathname = usePathname()
-  const [selected, setSelected] = useState<string>(searchParams.get("year") ?? new Date().getFullYear().toString());
+  const [selected, setSelected] = useState<string>(searchParams.get("year") ?? '(´• ω •`)ﾉ');
 
   const yearsList = useMemo(
     () => (validYears ?? []).map(it => it.year),
@@ -35,21 +35,25 @@ export default function YearSelector({ className }: YearSelectorProps) {
   );
 
   const setYear = useCallback(
-    (value: string) => {
-      const params = new URLSearchParams(searchParams.toString())
-      params.set("year", value)
-      router.push(`${pathname}?${params.toString()}`)
-    },
-    [searchParams, pathname, router]
-  )
-
-  useEffect(() => {
-    if (yearsList.length === 0) return;
+  (value: string) => {
     const params = new URLSearchParams(searchParams.toString())
-    const yearParam = params.get("year")
-    const newSelected = yearsList.find(year => yearParam === year) ?? new Date().getFullYear().toString();
-    setSelected(newSelected);
-  }, [searchParams, yearsList]);
+    if (value === "(´• ω •`)ﾉ") {
+      params.delete("year")
+    } else {
+      params.set("year", value)
+    }
+    router.push(`${pathname}?${params.toString()}`)
+  },
+  [searchParams, pathname, router]
+)
+
+useEffect(() => {
+  if (yearsList.length === 0) return;
+  const params = new URLSearchParams(searchParams.toString())
+  const yearParam = params.get("year")
+  const newSelected = yearsList.find(year => yearParam === year) ?? "(´• ω •`)ﾉ";
+  setSelected(newSelected);
+}, [searchParams, yearsList]);
 
   return (
     <div className={`${className} w-36`}>
@@ -74,6 +78,14 @@ export default function YearSelector({ className }: YearSelectorProps) {
             "transition duration-100 ease-in"
           )}
         >
+          {selected !== "(´• ω •`)ﾉ" && (
+            <ListboxOption
+              value={"(´• ω •`)ﾉ"}
+              className="group flex cursor-pointer items-center gap-2 rounded-lg px-3 select-none"
+            >
+              <div className="text-sm/6 text-white">(´• ω •`)ﾉ</div>
+            </ListboxOption>
+          )}
           {yearsList
             .filter((item) => item !== selected)
             .map((it, index) => (
