@@ -10,7 +10,7 @@ import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Home() {
   const searchParams = useSearchParams()
-  const currentYear = searchParams.get('year') ?? new Date().getFullYear().toString()
+  const currentYear = searchParams.get('year') ?? undefined
   
   const { data, isLoading, error } = useQuery<Log[]>({
     queryKey: ['logs', currentYear],

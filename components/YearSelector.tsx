@@ -13,6 +13,7 @@ import { BiChevronDown } from "react-icons/bi";
 import { useQuery } from "@tanstack/react-query";
 import { getYears } from "@/helpers/queries";
 import { Years } from "@/helpers/types";
+import { useTranslations } from "next-intl";
 
 type YearSelectorProps = {
   className?: string;
@@ -24,10 +25,11 @@ export default function YearSelector({ className }: YearSelectorProps) {
     queryFn: getYears,
   });
 
+  const t = useTranslations("components.YearSelector");
   const router = useRouter()
   const searchParams = useSearchParams()
   const pathname = usePathname()
-  const [selected, setSelected] = useState<string>(searchParams.get("year") ?? '(´• ω •`)ﾉ');
+  const [selected, setSelected] = useState<string>(searchParams.get("year") ?? "all");
 
   const yearsList = useMemo(
     () => (validYears ?? []).map(it => it.year),
@@ -37,8 +39,8 @@ export default function YearSelector({ className }: YearSelectorProps) {
   const setYear = useCallback(
   (value: string) => {
     const params = new URLSearchParams(searchParams.toString())
-    if (value === "(´• ω •`)ﾉ") {
-      params.delete("year")
+    if (value === "all") {
+      params.set("year", "")
     } else {
       params.set("year", value)
     }
@@ -51,7 +53,7 @@ useEffect(() => {
   if (yearsList.length === 0) return;
   const params = new URLSearchParams(searchParams.toString())
   const yearParam = params.get("year")
-  const newSelected = yearsList.find(year => yearParam === year) ?? "(´• ω •`)ﾉ";
+  const newSelected = yearsList.find(year => yearParam === year) ?? "all";
   setSelected(newSelected);
 }, [searchParams, yearsList]);
 
@@ -61,10 +63,10 @@ useEffect(() => {
         <ListboxButton
           className={clsx(
             "relative block w-full border-white border border-l pr-8 pl-3 text-left text-sm/6 text-white font-bold",
-            "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-black/25"
+            "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-black/25 lowercase"
           )}
         >
-          {selected}
+          {selected == 'all' ? t("all") : selected}
           <BiChevronDown
             className="group pointer-events-none absolute top-1 right-2.5 size-4 fill-white"
             aria-hidden="true"
@@ -78,12 +80,12 @@ useEffect(() => {
             "transition duration-100 ease-in"
           )}
         >
-          {selected !== "(´• ω •`)ﾉ" && (
+          {selected !== "all" && (
             <ListboxOption
-              value={"(´• ω •`)ﾉ"}
+              value={"all"}
               className="group flex cursor-pointer items-center gap-2 rounded-lg px-3 select-none"
             >
-              <div className="text-sm/6 text-white">(´• ω •`)ﾉ</div>
+              <div className="text-sm/6 text-white lowercase">{t("all")}</div>
             </ListboxOption>
           )}
           {yearsList
