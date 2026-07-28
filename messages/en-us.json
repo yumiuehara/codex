@@ -54,7 +54,11 @@
       "like": "liked",
       "hate": "hated",
       "suffering": "eternal suffering",
-      "replay": "again"
+      "replay": "again",
+      "COMPLETED": "completed",
+      "DROPPED": "dropped",
+      "ONGOING": "on going",
+      "ONHOLD": "on hold"
     },
     "YearSelector": {
       "all": "All"

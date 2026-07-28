@@ -92,7 +92,10 @@ export default function MediaInformationPage() {
                                         <span className="text-pink">_</span>
                                     </span>
                                 </div>
-                                <div className="bg-red text-white w-fit px-2 lowercase text-sm">{t(data?.MediaTypeName)}</div>
+                                <div className="flex gap-2">
+                                    <div className="bg-blue text-gray-800 w-fit px-2 py-1 lowercase text-sm">{t(data?.MediaTypeName)}</div>
+                                    {!data.logs.length && <div className="border border-gray-600 px-2 py-1 font-bold w-fit text-sm">backlog</div>}
+                                </div>
                             </div>
 
                             <div className="flex flex-col gap-2 text-xs md:text-sm mb-2">
@@ -131,10 +134,14 @@ export default function MediaInformationPage() {
                                         
                                         <div className="flex flex-wrap justify-between items-center border-t-gray-700 border-t gap-2 pt-2">
                                             <div className="flex flex-row flex-wrap gap-2 items-center text-xs">
+                                                {log.MediaStatus && <StatusTag text={log.MediaStatus}/>}
                                                 {Boolean(log.Enjoy) && <div className="flex items-center justify-center gap-2 px-2 py-1 bg-red/50 w-fit"><GoHeartFill /> {t("like")}</div>}
                                                 {Boolean(log.Hate) && <div className="flex items-center justify-center gap-2 px-2 py-1 bg-purple-500/50 w-fit"><BiSolidDislike /> {t("hate")}</div>}
                                                 {Boolean(log.EternalSuffering) && <div className="flex items-center justify-center gap-2 px-2 py-1 bg-blue-500/50 w-fit"> <IoInfiniteSharp /> {t("suffering")}</div>}
                                                 {Boolean(log.Replay) && <div className="flex items-center justify-center gap-2 px-2 py-1 bg-green-500/50 w-fit"><IoReloadCircle />{t("replay")}</div>}
+                                                {log.MediaStatus !== "COMPLETED" && log.Progress && log.ProgressTotal && 
+                                            <ProgressBar current={log.Progress} total={log.ProgressTotal} />
+                                        }
                                             </div>
 
                                             <div className="text-xs text-gray-500">#{log.IdLogPk}</div>
@@ -147,4 +154,42 @@ export default function MediaInformationPage() {
                 </div>
             }
     </section>
+}
+
+type StatusTagProps = {
+  text: string;
+};
+
+const statusColors: Record<string, string> = {
+  COMPLETED: "border-green-600",
+  DROPPED: "border-red-600",
+  ONGOING: "border-blue-600",
+  ONHOLD: "border-yellow-600",
+};
+
+function StatusTag({ text }: StatusTagProps) {
+  const t = useTranslations("components.MediaInformation");
+
+  return (
+    <div className={`border ${statusColors[text]} px-2 py-1 font-bold`}>{t(text)}</div>
+  );
+}
+
+function ProgressBar({ current = 0, total = 100 }) {
+  const pct = total > 0 ? Math.min(100, Math.max(0, (current / total) * 100)) : 0
+
+  return (
+    <div className="w-25 text-gray-100 flex gap-2 items-center justify-center text-xs border py-1 px-2 border-gray-600">
+      <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+        <div
+          className="h-full bg-blue rounded-full transition-all duration-300"
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+
+      <div>
+        {current}/{total}
+      </div>
+    </div>
+  )
 }

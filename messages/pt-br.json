@@ -54,7 +54,11 @@
       "like": "gostei",
       "hate": "odiei",
       "suffering": "sofrimento eterno",
-      "replay": "de novo"
+      "replay": "de novo",
+      "COMPLETED": "concluído",
+      "DROPPED": "abandonado",
+      "ONGOING": "em andamento",
+      "ONHOLD": "em pausa"
     },
     "YearSelector": {
       "all": "Tudo"

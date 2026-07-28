@@ -43,6 +43,9 @@ export interface Log {
   IdMediaTypeFk: number
   MediaTypeName: string
   MediaName: string
+  MediaStatus: string
+  Progress: number
+  ProgressTotal: number
 }
 
 export interface Total {
