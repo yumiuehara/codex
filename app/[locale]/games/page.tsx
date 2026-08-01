@@ -13,10 +13,11 @@ export default function GamePage() {
   const t = useTranslations("pages");
   const searchParams = useSearchParams()
   const currentYear = searchParams.get('year') ?? undefined
+  const currentStatus = searchParams.get("status") ?? undefined;
 
   const { data, isLoading } = useQuery<Log[]>({
-      queryKey: ['game', currentYear],
-      queryFn: () => getLogs(currentYear, MediaTypeEnum.GAME),
+      queryKey: ['game', currentYear, currentStatus],
+      queryFn: () => getLogs(currentYear, MediaTypeEnum.GAME, currentStatus),
   });
 
   return (

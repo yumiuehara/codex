@@ -13,10 +13,11 @@ export default function MoviePage() {
   const t = useTranslations("pages");
   const searchParams = useSearchParams()
   const currentYear = searchParams.get('year') ?? undefined
+  const currentStatus = searchParams.get("status") ?? undefined;
 
   const { data, isLoading } = useQuery<Log[]>({
-      queryKey: ['movie', currentYear],
-      queryFn: () => getLogs(currentYear, MediaTypeEnum.MOVIE),
+      queryKey: ['movie', currentYear, currentStatus],
+      queryFn: () => getLogs(currentYear, MediaTypeEnum.MOVIE, currentStatus),
   });
 
   return (

@@ -1,15 +1,11 @@
-export async function getLogs(year?: string, type?: number) {
-  let path = 'https://codex-api.yumi.dev.br/api/logs'
+export async function getLogs(year?: string, type?: number, mediaStatus?: string) {
+  const url = new URL('https://codex-api.yumi.dev.br/api/logs');
 
-  if (year) {
-    path += '?year=' + year
-  }
+  if (year) url.searchParams.set('year', year);
+  if (type) url.searchParams.set('type', String(type));
+  if (mediaStatus) url.searchParams.set('mediaStatus', mediaStatus);
 
-  if (type) {
-    path += (year ? '&type=' : '?type=') + type
-  }
-
-  const res = await fetch(path);
+  const res = await fetch(url);
   if (!res.ok) throw new Error('Error');
   return res.json();
 }

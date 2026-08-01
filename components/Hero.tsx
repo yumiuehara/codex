@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { InformationLine } from "./Information";
 import { useSearchParams } from "next/navigation";
+import StatusFilter from "./StatusFilter";
 
 export default function Hero() {
   const searchParams = useSearchParams()
@@ -23,6 +24,8 @@ export default function Hero() {
       </section>
 
       <InformationLine year={currentYear} />
+
+      <StatusFilter />
     </div>
   );
 }

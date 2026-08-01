@@ -11,10 +11,11 @@ import { AiOutlineLoading } from "react-icons/ai";
 export default function Home() {
   const searchParams = useSearchParams()
   const currentYear = searchParams.get('year') ?? undefined
+  const currentStatus = searchParams.get("status") ?? undefined;
   
   const { data, isLoading, error } = useQuery<Log[]>({
-    queryKey: ['logs', currentYear],
-    queryFn: () => getLogs(currentYear),
+    queryKey: ['logs', currentYear, currentStatus],
+    queryFn: () => getLogs(currentYear, undefined, currentStatus),
   });
 
   if (error) {
@@ -29,7 +30,7 @@ export default function Home() {
         <AiOutlineLoading className="animate-spin" />
       </div>}
 
-      {data && data.length > 0 &&
+      {data &&
         <ListSection
           customClass="mx-8 sm:mx-10 my-5"
           data={data}

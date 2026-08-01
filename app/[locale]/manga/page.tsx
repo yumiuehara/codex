@@ -13,10 +13,11 @@ export default function MangaPage() {
   const t = useTranslations("pages");
   const searchParams = useSearchParams()
   const currentYear = searchParams.get('year') ?? undefined
+  const currentStatus = searchParams.get("status") ?? undefined;
   
   const { data, isLoading } = useQuery<Log[]>({
-      queryKey: ['manga', currentYear],
-      queryFn: () => getLogs(currentYear, MediaTypeEnum.MANGA),
+      queryKey: ['manga', currentYear, currentStatus],
+      queryFn: () => getLogs(currentYear, MediaTypeEnum.MANGA, currentStatus),
   });
 
   return (

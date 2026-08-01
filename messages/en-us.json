@@ -58,7 +58,9 @@
       "COMPLETED": "completed",
       "DROPPED": "dropped",
       "ONGOING": "on going",
-      "ONHOLD": "on hold"
+      "ONHOLD": "on hold",
+      "BACKLOG": "backlog",
+      "all": "all"
     },
     "YearSelector": {
       "all": "All"

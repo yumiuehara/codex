@@ -77,6 +77,7 @@ export function InformationLine({ ...props }: InformationProps) {
           }
         </div>
       </div>
+      
     </div>
   );
 }

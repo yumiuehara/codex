@@ -13,10 +13,11 @@ export default function AnimePage() {
   const t = useTranslations("pages");
   const searchParams = useSearchParams()
   const currentYear = searchParams.get('year') ?? undefined
+  const currentStatus = searchParams.get("status") ?? undefined;
 
   const { data, isLoading } = useQuery<Log[]>({
-      queryKey: ['anime', currentYear],
-      queryFn: () => getLogs(currentYear, MediaTypeEnum.ANIME),
+      queryKey: ['anime', currentYear, currentStatus],
+      queryFn: () => getLogs(currentYear, MediaTypeEnum.ANIME, currentStatus),
   });
 
   return (

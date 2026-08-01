@@ -13,10 +13,11 @@ export default function SeriesPage() {
   const t = useTranslations("pages");
   const searchParams = useSearchParams()
   const currentYear = searchParams.get('year') ?? undefined
+  const currentStatus = searchParams.get("status") ?? undefined;
 
   const { data, isLoading } = useQuery<Log[]>({
-      queryKey: ['series', currentYear],
-      queryFn: () => getLogs(currentYear, MediaTypeEnum.TV_SERIES),
+      queryKey: ['series', currentYear, currentStatus],
+      queryFn: () => getLogs(currentYear, MediaTypeEnum.TV_SERIES, currentStatus),
   });
 
   return (
