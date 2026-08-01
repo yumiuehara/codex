@@ -139,9 +139,9 @@ export default function MediaInformationPage() {
                                                 {Boolean(log.Hate) && <div className="flex items-center justify-center gap-2 px-2 py-1 bg-purple-500/50 w-fit"><BiSolidDislike /> {t("hate")}</div>}
                                                 {Boolean(log.EternalSuffering) && <div className="flex items-center justify-center gap-2 px-2 py-1 bg-blue-500/50 w-fit"> <IoInfiniteSharp /> {t("suffering")}</div>}
                                                 {Boolean(log.Replay) && <div className="flex items-center justify-center gap-2 px-2 py-1 bg-green-500/50 w-fit"><IoReloadCircle />{t("replay")}</div>}
-                                                {log.MediaStatus !== "COMPLETED" && log.Progress && log.ProgressTotal && 
-                                            <ProgressBar current={log.Progress} total={log.ProgressTotal} />
-                                        }
+                                                {log.MediaStatus !== "COMPLETED" && log.Progress && 
+                                                    <ProgressBar current={log.Progress} total={log.ProgressTotal} />
+                                                }
                                             </div>
 
                                             <div className="text-xs text-gray-500">#{log.IdLogPk}</div>
@@ -175,8 +175,14 @@ function StatusTag({ text }: StatusTagProps) {
   );
 }
 
-function ProgressBar({ current = 0, total = 100 }) {
-  const pct = total > 0 ? Math.min(100, Math.max(0, (current / total) * 100)) : 0
+
+type ProgressBarProps = {
+  current: number;
+  total?: number | undefined
+};
+
+function ProgressBar({ current, total }: ProgressBarProps) {
+  const pct = Math.min(100, Math.max(0, (current / (total ?? current * 2)) * 100))
 
   return (
     <div className="w-25 text-gray-100 flex gap-2 items-center justify-center text-xs border py-1 px-2 border-gray-600">
@@ -188,7 +194,7 @@ function ProgressBar({ current = 0, total = 100 }) {
       </div>
 
       <div>
-        {current}/{total}
+        {current}/{total ?? "??"}
       </div>
     </div>
   )
