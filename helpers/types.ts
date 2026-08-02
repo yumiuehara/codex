@@ -24,6 +24,9 @@ export interface Media {
   IdMediaTypeFk: number
   MediaTypeName: string
   MediaName: string
+  YearRelease?: number
+  Authors?: string
+  Status?: string
   logs: Log[]
 }
 

@@ -60,7 +60,10 @@
       "ONGOING": "on going",
       "ONHOLD": "on hold",
       "BACKLOG": "backlog",
-      "all": "all"
+      "CANCELED": "canceled",
+      "HIATUS": "on hiatus",
+      "all": "all",
+      "synopsis": "Synopsis"
     },
     "YearSelector": {
       "all": "All"

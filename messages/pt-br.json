@@ -60,7 +60,10 @@
       "ONGOING": "em andamento",
       "ONHOLD": "em pausa",
       "BACKLOG": "backlog",
-      "all": "todos"
+      "CANCELED": "cancelado",
+      "HIATUS": "em hiato",
+      "all": "todos",
+      "synopsis": "Sinopse"
     },
     "YearSelector": {
       "all": "Tudo"

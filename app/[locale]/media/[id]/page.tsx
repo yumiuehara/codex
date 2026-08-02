@@ -93,8 +93,19 @@ export default function MediaInformationPage() {
                                     </span>
                                 </div>
                                 <div className="flex gap-2">
-                                    <div className="bg-blue text-gray-800 w-fit px-2 py-1 lowercase text-sm">{t(data?.MediaTypeName)}</div>
-                                    {!data.logs.length && <div className="border border-gray-600 px-2 py-1 font-bold w-fit text-sm">backlog</div>}
+                                    <div className="border border-blue text-gray-200 w-fit px-2 py-1 uppercase font-semibold text-sm">{t(data?.MediaTypeName)}</div>
+                                    {!data.logs.length && <div className="border border-gray-600 px-2 py-1 w-fit uppercase font-semibold text-sm">backlog</div>}
+                                    {data.YearRelease && 
+                                        <div className="border border-pink text-gray-200 w-fit px-2 py-1 uppercase font-semibold text-sm">{data?.YearRelease}</div>
+                                    }
+                                    {data.Authors &&
+                                        <div className="border border-blue text-gray-200 w-fit px-2 py-1 uppercase font-semibold text-sm">
+                                            <div>{data.Authors}</div>
+                                        </div>
+                                    }
+                                    {data.Status && <div className="border border-pink text-gray-200 w-fit px-2 py-1 uppercase font-semibold text-sm">
+                                            <div>{t(data.Status)}</div>
+                                        </div>}
                                 </div>
                             </div>
 
