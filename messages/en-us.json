@@ -63,7 +63,8 @@
       "CANCELED": "canceled",
       "HIATUS": "on hiatus",
       "all": "all",
-      "synopsis": "Synopsis"
+      "synopsis": "Synopsis",
+      "TOKUSATSU": "tokusatsu"
     },
     "YearSelector": {
       "all": "All"
