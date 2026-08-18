@@ -64,7 +64,10 @@
       "HIATUS": "on hiatus",
       "all": "all",
       "synopsis": "Synopsis",
-      "TOKUSATSU": "tokusatsu"
+      "TOKUSATSU": "tokusatsu",
+      "MANHWA": "manhwa",
+      "MANHUA": "manhua",
+      "LN": "light novel"
     },
     "YearSelector": {
       "all": "All"

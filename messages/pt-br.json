@@ -63,7 +63,11 @@
       "CANCELED": "cancelado",
       "HIATUS": "em hiato",
       "all": "todos",
-      "synopsis": "Sinopse"
+      "synopsis": "Sinopse",
+      "TOKUSATSU": "tokusatsu",
+      "MANHWA": "manhwa",
+      "MANHUA": "manhua",
+      "LN": "light novel"
     },
     "YearSelector": {
       "all": "Tudo"
