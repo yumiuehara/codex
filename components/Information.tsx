@@ -32,36 +32,7 @@ export function InformationLine({ ...props }: InformationProps) {
   const totalBooks =  data?.find(it => it.IdMediaTypePk == MediaTypeEnum.BOOK)?.total || 0
 
   return (
-    <div className={clsx("w-full relative bg-pink min-h-18 px-8 lg:py-5 py-2 lg:flex-row flex-col gap-4 flex items-center justify-between border-y", props.customClass)}>
-      <div className="gap-4 items-center flex -mt-17 lg:-mt-20">
-        <div className="flex flex-col items-center lg:items-start gap-y-2 mt-7">
-          <div className="flex gap-2">
-            <Link href="https://steamcommunity.com/id/pasteldepeido/" target="_blank">
-              <div className="bg-pink w-8 h-8 border flex items-center justify-center">
-                <FaSteam className="w-4 h-4 fill-white" />
-              </div>
-            </Link>
-            <Link href="https://letterboxd.com/uehara/" target="_blank">
-              <div className="bg-pink w-8 h-8 border flex items-center justify-center">
-                <FaSquareLetterboxd className="w-4 h-4 fill-white" />
-              </div>
-            </Link>
-            <Link href="https://myanimelist.net/profile/uehara" target="_blank">
-              <div className="bg-pink w-8 h-8 border flex items-center justify-center">
-                <SiMyanimelist className="w-4 h-4 fill-white" />
-              </div>
-            </Link>
-            <Link href="https://mydramalist.com/profile/uehara" target="_blank">
-              <div className="bg-pink w-8 h-8 border flex items-center justify-center">
-                <TbDeviceTvFilled className="w-4 h-4 fill-white" />
-              </div>  
-            </Link>  
-          </div> 
-          <div className="text-sm wrap-break-word">
-            yumi; cachorro salsinha; sardinha;
-          </div>     
-        </div>
-      </div>
+    <div className={clsx("w-full relative bg-pink min-h-18 px-8 lg:py-5 py-2 lg:flex-row flex-col gap-4 flex items-center justify-center border-y", props.customClass)}>
       <div className="flex lg:flex-row flex-col gap-4 items-center">
         <YearSelector />
         <div className="flex flex-wrap gap-2 items-center justify-center">
