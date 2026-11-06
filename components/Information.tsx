@@ -1,11 +1,6 @@
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import YearSelector from "./YearSelector";
-import { FaSquareLetterboxd } from "react-icons/fa6";
-import { SiMyanimelist } from "react-icons/si";
-import { TbDeviceTvFilled } from "react-icons/tb";
-import { FaSteam } from "react-icons/fa";
-import Link from "next/link";
 import { MediaTypeEnum, Total } from "@/helpers/types";
 import { useQuery } from "@tanstack/react-query";
 import { AiOutlineLoading } from "react-icons/ai";
